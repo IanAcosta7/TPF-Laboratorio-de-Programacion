@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TPF_Laboratorio_de_Programacion
 {
-    public partial class Form1 : Form
+    public partial class formAgregar : Form
     {
-        public Form1()
+        public formAgregar()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
