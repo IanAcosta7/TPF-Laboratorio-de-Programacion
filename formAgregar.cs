@@ -21,5 +21,16 @@ namespace TPF_Laboratorio_de_Programacion
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            /*
+             *agregar nuevo
+            *
+            * actualizarlista()
+             *
+             *
+             */
+        }
     }
 }
