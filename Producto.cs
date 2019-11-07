@@ -9,15 +9,19 @@ namespace TPF_Laboratorio_de_Programacion
     class Producto
     {
         // Ejemplo para el tincho
-        public string nombre;
         public string marca;
+        public string color;
+        public double talle;
         public int stock;
+        public double precio;
 
-        public Producto (string nombres, string marcas, int stocks)
+        public Producto (string newMarca, string newColor, double newTalle, int newStock, double newPrecio)
         {
-            nombre = nombres;
-            marca = marcas;
-            stock = stocks;
+            marca = newMarca;
+            color = newColor;
+            talle = newTalle;
+            stock = newStock;
+            precio = newPrecio;
         }
     }
 }

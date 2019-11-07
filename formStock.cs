@@ -19,7 +19,6 @@ namespace TPF_Laboratorio_de_Programacion
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Producto nuevos = new Producto("Zapatilla", "Adidis", 2);
 
             formAgregar nuevo = new formAgregar();
             nuevo.MdiParent = this.MdiParent;
@@ -29,6 +28,13 @@ namespace TPF_Laboratorio_de_Programacion
         private void stockToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            formModificar nuevo = new formModificar();
+            nuevo.MdiParent = this.MdiParent;
+            nuevo.Show();
         }
     }
 }
