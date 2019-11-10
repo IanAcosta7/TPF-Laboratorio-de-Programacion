@@ -56,6 +56,7 @@ namespace TPF_Laboratorio_de_Programacion
 
             // Creo el producto
             Producto nuevo = new Producto(marca, color, talle, stock, precio);
+            nuevo.actualizarDB();
 
             //Console.WriteLine(nuevo.marca);
             
