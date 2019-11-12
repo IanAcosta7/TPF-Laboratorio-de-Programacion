@@ -46,6 +46,7 @@ namespace TPF_Laboratorio_de_Programacion
         private void btnCargar_Click(object sender, EventArgs e)
         {
             // Funcionalidad de carga de producto
+            string nombre = txtNombre.Text;
             string marca = txtMarca.Text;
             string color = txtColor.Text;
             double talle = Convert.ToDouble(txtTalle.Text);
@@ -55,7 +56,7 @@ namespace TPF_Laboratorio_de_Programacion
             // Validaciones
 
             // Creo el producto
-            Producto nuevo = new Producto(marca, color, talle, stock, precio);
+            Producto nuevo = new Producto(nombre, marca, color, talle, stock, precio);
             nuevo.actualizarDB();
 
             //Console.WriteLine(nuevo.marca);

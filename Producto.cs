@@ -8,15 +8,16 @@ namespace TPF_Laboratorio_de_Programacion
 {
     class Producto
     {
-        // Ejemplo para el tincho
+        public string nombre;
         public string marca;
         public string color;
         public double talle;
         public int stock;
         public double precio;
 
-        public Producto (string newMarca, string newColor, double newTalle, int newStock, double newPrecio)
+        public Producto (string newNombre, string newMarca, string newColor, double newTalle, int newStock, double newPrecio)
         {
+            nombre = newNombre;
             marca = newMarca;
             color = newColor;
             talle = newTalle;
@@ -26,8 +27,10 @@ namespace TPF_Laboratorio_de_Programacion
 
         public void actualizarDB ()
         {
-            string cmd = string.Format("INSERT INTO Productos (marca, color, talle, stock, precio) VALUES (\'{0}\', \'{1}\', {2}, {3}, {4})", this.marca, this.color, this.talle, this.stock, this.precio);
-            Utilidades.agregarDB(cmd);             
+            string cmd = string.Format("EXEC ActualizarProducto '{0}', '{1}', '{2}', '{3}', '{4}', '{5}'", this.nombre, this.marca, this.color, this.talle, this.stock, this.precio);
+            //string cmd = string.Format("INSERT INTO Productos (marca, color, talle, stock, precio) VALUES (\'{0}\', \'{1}\', {2}, {3}, {4})", this.marca, this.color, this.talle, this.stock, this.precio);
+            //Utilidades.agregarDB(cmd);  
+            Utilidades.Ejecutar(cmd);
         }
     }
 }
