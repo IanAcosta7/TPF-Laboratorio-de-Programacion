@@ -50,18 +50,17 @@
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(57, 139);
+            this.lblMarca.Location = new System.Drawing.Point(67, 126);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(57, 17);
             this.lblMarca.TabIndex = 1;
             this.lblMarca.Text = "Marca:";
-            this.lblMarca.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblColor
             // 
             this.lblColor.AutoSize = true;
             this.lblColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblColor.Location = new System.Drawing.Point(57, 188);
+            this.lblColor.Location = new System.Drawing.Point(67, 175);
             this.lblColor.Name = "lblColor";
             this.lblColor.Size = new System.Drawing.Size(51, 17);
             this.lblColor.TabIndex = 4;
@@ -71,7 +70,7 @@
             // 
             this.lblTalle.AutoSize = true;
             this.lblTalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTalle.Location = new System.Drawing.Point(57, 234);
+            this.lblTalle.Location = new System.Drawing.Point(67, 221);
             this.lblTalle.Name = "lblTalle";
             this.lblTalle.Size = new System.Drawing.Size(49, 17);
             this.lblTalle.TabIndex = 5;
@@ -81,7 +80,7 @@
             // 
             this.lblStock.AutoSize = true;
             this.lblStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.Location = new System.Drawing.Point(57, 287);
+            this.lblStock.Location = new System.Drawing.Point(67, 274);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(53, 17);
             this.lblStock.TabIndex = 6;
@@ -91,7 +90,7 @@
             // 
             this.blPrecio.AutoSize = true;
             this.blPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blPrecio.Location = new System.Drawing.Point(57, 338);
+            this.blPrecio.Location = new System.Drawing.Point(67, 325);
             this.blPrecio.Name = "blPrecio";
             this.blPrecio.Size = new System.Drawing.Size(59, 17);
             this.blPrecio.TabIndex = 7;
@@ -99,35 +98,35 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.Location = new System.Drawing.Point(143, 136);
+            this.txtMarca.Location = new System.Drawing.Point(153, 123);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(293, 22);
             this.txtMarca.TabIndex = 8;
             // 
             // txtColor
             // 
-            this.txtColor.Location = new System.Drawing.Point(143, 185);
+            this.txtColor.Location = new System.Drawing.Point(153, 172);
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(293, 22);
             this.txtColor.TabIndex = 9;
             // 
             // txtTalle
             // 
-            this.txtTalle.Location = new System.Drawing.Point(143, 231);
+            this.txtTalle.Location = new System.Drawing.Point(153, 218);
             this.txtTalle.Name = "txtTalle";
             this.txtTalle.Size = new System.Drawing.Size(293, 22);
             this.txtTalle.TabIndex = 10;
             // 
             // txtStock
             // 
-            this.txtStock.Location = new System.Drawing.Point(143, 284);
+            this.txtStock.Location = new System.Drawing.Point(153, 271);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(293, 22);
             this.txtStock.TabIndex = 11;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(143, 335);
+            this.txtPrecio.Location = new System.Drawing.Point(153, 322);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(293, 22);
             this.txtPrecio.TabIndex = 12;
@@ -135,7 +134,7 @@
             // btnCancelar
             // 
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(60, 401);
+            this.btnCancelar.Location = new System.Drawing.Point(70, 388);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(101, 29);
             this.btnCancelar.TabIndex = 14;
@@ -146,7 +145,7 @@
             // btnCargar
             // 
             this.btnCargar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCargar.Location = new System.Drawing.Point(335, 401);
+            this.btnCargar.Location = new System.Drawing.Point(345, 388);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(101, 29);
             this.btnCargar.TabIndex = 15;
@@ -156,7 +155,7 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(143, 42);
+            this.txtCodigo.Location = new System.Drawing.Point(153, 29);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(293, 22);
@@ -166,16 +165,15 @@
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(57, 45);
+            this.lblCodigo.Location = new System.Drawing.Point(67, 32);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(63, 17);
             this.lblCodigo.TabIndex = 3;
             this.lblCodigo.Text = "Código:";
-            this.lblCodigo.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(143, 89);
+            this.txtNombre.Location = new System.Drawing.Point(153, 76);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(293, 22);
             this.txtNombre.TabIndex = 16;
@@ -184,7 +182,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(57, 92);
+            this.lblNombre.Location = new System.Drawing.Point(67, 79);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(69, 17);
             this.lblNombre.TabIndex = 17;

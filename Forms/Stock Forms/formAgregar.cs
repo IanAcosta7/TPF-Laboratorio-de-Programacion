@@ -17,11 +17,6 @@ namespace TPF_Laboratorio_de_Programacion
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             /*
@@ -31,11 +26,6 @@ namespace TPF_Laboratorio_de_Programacion
              *
              *
              */
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
