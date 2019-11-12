@@ -65,7 +65,7 @@
     <Compile Include="Forms\Stock Forms\formAgregar.Designer.cs">
       <DependentUpon>formAgregar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Utilidades.cs" />
     <EmbeddedResource Include="Forms\Stock Forms\formModificar.resx">

@@ -44,12 +44,11 @@ namespace TPF_Laboratorio_de_Programacion
             double precio = Convert.ToDouble(txtPrecio.Text);
 
             // Validaciones
+            // POR HACER
 
             // Creo el producto
             Producto nuevo = new Producto(nombre, marca, color, talle, stock, precio);
             nuevo.actualizarDB();
-
-            //Console.WriteLine(nuevo.marca);
             
             this.Close();
         }
