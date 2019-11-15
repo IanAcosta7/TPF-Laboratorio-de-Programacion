@@ -36,5 +36,10 @@ namespace TPF_Laboratorio_de_Programacion
             nuevo.MdiParent = this.MdiParent;
             nuevo.Show();
         }
+
+        private void gbMain_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
