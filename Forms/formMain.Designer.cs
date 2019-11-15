@@ -137,6 +137,10 @@
             // dgvStock
             // 
             this.dgvStock.AllowUserToAddRows = false;
+            this.dgvStock.AllowUserToDeleteRows = false;
+            this.dgvStock.AllowUserToOrderColumns = true;
+            this.dgvStock.AllowUserToResizeColumns = false;
+            this.dgvStock.AllowUserToResizeRows = false;
             this.dgvStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -219,6 +223,7 @@
             this.Name = "formStock";
             this.Text = "Nombre del programa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.formStock_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.gbMain.ResumeLayout(false);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace TPF_Laboratorio_de_Programacion
 {
@@ -28,9 +29,29 @@ namespace TPF_Laboratorio_de_Programacion
         public void actualizarDB ()
         {
             string cmd = string.Format("EXEC ActualizarProducto '{0}', '{1}', '{2}', '{3}', '{4}', '{5}'", this.nombre, this.marca, this.color, this.talle, this.stock, this.precio);
-            //string cmd = string.Format("INSERT INTO Productos (marca, color, talle, stock, precio) VALUES (\'{0}\', \'{1}\', {2}, {3}, {4})", this.marca, this.color, this.talle, this.stock, this.precio);
-            //Utilidades.agregarDB(cmd);  
             Utilidades.Ejecutar(cmd);
         }
+
+        public static DataSet getAllProducts ()
+        {
+            //Producto[] productos = null;
+
+            // Conexion BD
+            string cmd = "SELECT * FROM Productos";
+            DataSet ds = Utilidades.Ejecutar(cmd);
+            //Console.WriteLine(DS.Tables[0].Rows[0]["Nombre"].ToString());
+            //drcToProductos(DS.Tables[0].Rows);
+
+            return ds;
+            //return productos;
+        }
+
+        /*
+        protected static Producto[] drcToProductos (DataRowCollection drc)
+        {
+            Producto[] productos = null;
+
+            return productos;
+        }*/
     }
 }

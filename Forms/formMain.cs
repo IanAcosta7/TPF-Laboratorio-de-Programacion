@@ -41,5 +41,19 @@ namespace TPF_Laboratorio_de_Programacion
         {
 
         }
+
+        private void formStock_Load(object sender, EventArgs e)
+        {
+            DataTable Productos = Producto.getAllProducts().Tables[0];
+            dgvStock.DataSource = Producto.getAllProducts().Tables[0];
+            //dgvStock.Columns[0].HeaderText = "Nombre";
+            colNombre.DataPropertyName = Productos.Columns[1].ColumnName;
+            colMarca.DataPropertyName = Productos.Columns[2].ColumnName;
+            colStock.DataPropertyName = Productos.Columns[5].ColumnName;
+            colPrecio.DataPropertyName = Productos.Columns[6].ColumnName;
+            colTalle.DataPropertyName = Productos.Columns[4].ColumnName;
+            colColor.DataPropertyName = Productos.Columns[3].ColumnName;
+            colCodigo.DataPropertyName = Productos.Columns[0].ColumnName;
+        }
     }
 }
