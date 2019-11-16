@@ -144,6 +144,7 @@
             this.dgvStock.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNombre,
@@ -153,11 +154,16 @@
             this.colTalle,
             this.colColor,
             this.colCodigo});
+            this.dgvStock.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvStock.Location = new System.Drawing.Point(28, 33);
+            this.dgvStock.MultiSelect = false;
             this.dgvStock.Name = "dgvStock";
+            this.dgvStock.ReadOnly = true;
             this.dgvStock.RowHeadersVisible = false;
             this.dgvStock.RowHeadersWidth = 51;
             this.dgvStock.RowTemplate.Height = 24;
+            this.dgvStock.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStock.Size = new System.Drawing.Size(625, 398);
             this.dgvStock.TabIndex = 4;
             // 
@@ -166,49 +172,49 @@
             this.colNombre.HeaderText = "Nombre";
             this.colNombre.MinimumWidth = 6;
             this.colNombre.Name = "colNombre";
-            this.colNombre.Width = 125;
+            this.colNombre.ReadOnly = true;
             // 
             // colMarca
             // 
             this.colMarca.HeaderText = "Marca";
             this.colMarca.MinimumWidth = 6;
             this.colMarca.Name = "colMarca";
-            this.colMarca.Width = 125;
+            this.colMarca.ReadOnly = true;
             // 
             // colStock
             // 
             this.colStock.HeaderText = "Stock";
             this.colStock.MinimumWidth = 6;
             this.colStock.Name = "colStock";
-            this.colStock.Width = 75;
+            this.colStock.ReadOnly = true;
             // 
             // colPrecio
             // 
             this.colPrecio.HeaderText = "Precio";
             this.colPrecio.MinimumWidth = 6;
             this.colPrecio.Name = "colPrecio";
-            this.colPrecio.Width = 125;
+            this.colPrecio.ReadOnly = true;
             // 
             // colTalle
             // 
             this.colTalle.HeaderText = "Talle";
             this.colTalle.MinimumWidth = 6;
             this.colTalle.Name = "colTalle";
-            this.colTalle.Width = 75;
+            this.colTalle.ReadOnly = true;
             // 
             // colColor
             // 
             this.colColor.HeaderText = "Color";
             this.colColor.MinimumWidth = 6;
             this.colColor.Name = "colColor";
-            this.colColor.Width = 125;
+            this.colColor.ReadOnly = true;
             // 
             // colCodigo
             // 
             this.colCodigo.HeaderText = "Codigo";
             this.colCodigo.MinimumWidth = 6;
             this.colCodigo.Name = "colCodigo";
-            this.colCodigo.Width = 75;
+            this.colCodigo.ReadOnly = true;
             // 
             // formStock
             // 

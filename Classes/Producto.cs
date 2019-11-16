@@ -37,7 +37,7 @@ namespace TPF_Laboratorio_de_Programacion
             //Producto[] productos = null;
 
             // Conexion BD
-            string cmd = "SELECT * FROM Productos";
+            string cmd = "SELECT * FROM Productos WHERE borrado=0";
             DataSet ds = Utilidades.Ejecutar(cmd);
             //Console.WriteLine(DS.Tables[0].Rows[0]["Nombre"].ToString());
             //drcToProductos(DS.Tables[0].Rows);

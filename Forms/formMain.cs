@@ -45,6 +45,7 @@ namespace TPF_Laboratorio_de_Programacion
         private void formStock_Load(object sender, EventArgs e)
         {
             DataTable Productos = Producto.getAllProducts().Tables[0];
+            dgvStock.AutoGenerateColumns = false;
             dgvStock.DataSource = Producto.getAllProducts().Tables[0];
             //dgvStock.Columns[0].HeaderText = "Nombre";
             colNombre.DataPropertyName = Productos.Columns[1].ColumnName;
