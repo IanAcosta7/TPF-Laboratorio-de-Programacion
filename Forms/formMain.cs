@@ -25,11 +25,6 @@ namespace TPF_Laboratorio_de_Programacion
             nuevo.Show();
         }
 
-        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnModificar_Click(object sender, EventArgs e)
         {
             formModificar nuevo = new formModificar();
@@ -37,14 +32,9 @@ namespace TPF_Laboratorio_de_Programacion
             nuevo.Show();
         }
 
-        private void gbMain_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void formStock_Load(object sender, EventArgs e)
         {
-            this.actualizarDVGStock();
+            //this.actualizarDVGStock();
         }
 
         public void actualizarDVGStock ()
@@ -75,6 +65,11 @@ namespace TPF_Laboratorio_de_Programacion
             {
                 MessageBox.Show("No se ha seleccionado ningún producto.");
             }
+        }
+
+        private void dgvStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
