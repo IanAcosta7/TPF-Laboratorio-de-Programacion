@@ -46,16 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\Stock Forms\formModificar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\Stock Forms\formModificar.Designer.cs">
+      <DependentUpon>formModificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Producto.cs" />
+    <Compile Include="Forms\formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Stock Forms\formAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Stock Forms\formAgregar.Designer.cs">
+      <DependentUpon>formAgregar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Classes\Utilidades.cs" />
+    <EmbeddedResource Include="Forms\Stock Forms\formModificar.resx">
+      <DependentUpon>formModificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Stock Forms\formAgregar.resx">
+      <DependentUpon>formAgregar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
