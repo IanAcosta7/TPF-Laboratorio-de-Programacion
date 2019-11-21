@@ -44,17 +44,37 @@ namespace TPF_Laboratorio_de_Programacion
 
         private void formStock_Load(object sender, EventArgs e)
         {
-            DataTable Productos = Producto.getAllProducts().Tables[0];
+            this.actualizarDVGStock();
+        }
+
+        public void actualizarDVGStock ()
+        {
+            // Se cargan los datos en el DGV
+            DataTable productos = Producto.getAllProducts().Tables[0];
             dgvStock.AutoGenerateColumns = false;
-            dgvStock.DataSource = Producto.getAllProducts().Tables[0];
-            //dgvStock.Columns[0].HeaderText = "Nombre";
-            colNombre.DataPropertyName = Productos.Columns[1].ColumnName;
-            colMarca.DataPropertyName = Productos.Columns[2].ColumnName;
-            colStock.DataPropertyName = Productos.Columns[5].ColumnName;
-            colPrecio.DataPropertyName = Productos.Columns[6].ColumnName;
-            colTalle.DataPropertyName = Productos.Columns[4].ColumnName;
-            colColor.DataPropertyName = Productos.Columns[3].ColumnName;
-            colCodigo.DataPropertyName = Productos.Columns[0].ColumnName;
+            dgvStock.DataSource = productos;
+
+            // Se insertan los datos en cada columna
+            colNombre.DataPropertyName = productos.Columns[1].ColumnName;
+            colMarca.DataPropertyName = productos.Columns[2].ColumnName;
+            colStock.DataPropertyName = productos.Columns[5].ColumnName;
+            colPrecio.DataPropertyName = productos.Columns[6].ColumnName;
+            colTalle.DataPropertyName = productos.Columns[4].ColumnName;
+            colColor.DataPropertyName = productos.Columns[3].ColumnName;
+            colCodigo.DataPropertyName = productos.Columns[0].ColumnName;
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            if (dgvStock.SelectedRows.Count >= 1)
+            {
+                DataGridViewCellCollection data = dgvStock.SelectedRows[0].Cells;
+                Producto.borrarProducto(data[0].Value.ToString());
+                this.actualizarDVGStock();
+            } else
+            {
+                MessageBox.Show("No se ha seleccionado ningún producto.");
+            }
         }
     }
 }

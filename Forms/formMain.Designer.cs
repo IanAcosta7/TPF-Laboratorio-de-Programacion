@@ -64,18 +64,19 @@
             // btnBorrar
             // 
             this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBorrar.Location = new System.Drawing.Point(690, 69);
+            this.btnBorrar.Location = new System.Drawing.Point(690, 129);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(3, 15, 15, 3);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(90, 30);
             this.btnBorrar.TabIndex = 1;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnModificar
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(690, 105);
+            this.btnModificar.Location = new System.Drawing.Point(690, 81);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 15, 15, 3);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(90, 30);

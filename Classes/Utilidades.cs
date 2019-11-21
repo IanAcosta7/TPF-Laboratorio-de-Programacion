@@ -31,28 +31,6 @@ namespace TPF_Laboratorio_de_Programacion
             return DS;
         }
 
-        /*
-        public static void agregarDB (string cmd)
-        {
-            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=TPF2019;Integrated Security=True");
-
-            try
-            {
-                // Conexion a la base de datos
-                con.Open();
-
-                // Comando de la conexion
-                SqlCommand command = new SqlCommand(cmd, con);
-
-                // Se ejecuta el comando
-                command.ExecuteNonQuery();
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show("ERROR: " + err.Message);
-            }
-            con.Close();
-        }
-        */
+        
     }
 }

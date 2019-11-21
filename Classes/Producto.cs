@@ -34,24 +34,18 @@ namespace TPF_Laboratorio_de_Programacion
 
         public static DataSet getAllProducts ()
         {
-            //Producto[] productos = null;
-
             // Conexion BD
             string cmd = "SELECT * FROM Productos WHERE borrado=0";
             DataSet ds = Utilidades.Ejecutar(cmd);
-            //Console.WriteLine(DS.Tables[0].Rows[0]["Nombre"].ToString());
-            //drcToProductos(DS.Tables[0].Rows);
 
             return ds;
-            //return productos;
+        }
+        
+        public static void borrarProducto(string nombre)
+        {
+            string cmd = string.Format("EXEC EliminarProducto '{0}'", nombre);
+            Utilidades.Ejecutar(cmd);
         }
 
-        /*
-        protected static Producto[] drcToProductos (DataRowCollection drc)
-        {
-            Producto[] productos = null;
-
-            return productos;
-        }*/
     }
 }
