@@ -10,31 +10,39 @@ using System.Windows.Forms;
 
 namespace TPF_Laboratorio_de_Programacion
 {
-    public partial class formStock : Form
+    public partial class formMain : Form
     {
-        public formStock()
+        public formMain()
         {
             InitializeComponent();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
             formAgregar nuevo = new formAgregar();
-            nuevo.MdiParent = this.MdiParent;
             nuevo.Show();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            formModificar nuevo = new formModificar();
-            nuevo.MdiParent = this.MdiParent;
-            nuevo.Show();
+            if (dgvStock.SelectedRows.Count == 1)
+            {
+                DataGridViewCellCollection data = dgvStock.SelectedRows[0].Cells;
+
+                // Creo un formulario modificar y lo cargo
+                formModificar nuevo = new formModificar();
+                nuevo.cargarFormulario(data[0].Value.ToString());
+                nuevo.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ningún producto.");
+            }
         }
 
         private void formStock_Load(object sender, EventArgs e)
         {
-            //this.actualizarDVGStock();
+            this.actualizarDVGStock();
         }
 
         public void actualizarDVGStock ()
@@ -56,20 +64,17 @@ namespace TPF_Laboratorio_de_Programacion
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            if (dgvStock.SelectedRows.Count >= 1)
+            if (dgvStock.SelectedRows.Count == 1)
             {
                 DataGridViewCellCollection data = dgvStock.SelectedRows[0].Cells;
+
+                // Borro el proucto
                 Producto.borrarProducto(data[0].Value.ToString());
                 this.actualizarDVGStock();
             } else
             {
                 MessageBox.Show("No se ha seleccionado ningún producto.");
             }
-        }
-
-        private void dgvStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

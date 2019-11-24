@@ -98,38 +98,43 @@
             // 
             // txtMarca
             // 
+            this.txtMarca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMarca.Location = new System.Drawing.Point(153, 123);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(293, 22);
-            this.txtMarca.TabIndex = 8;
+            this.txtMarca.TabIndex = 1;
             // 
             // txtColor
             // 
+            this.txtColor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtColor.Location = new System.Drawing.Point(153, 172);
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(293, 22);
-            this.txtColor.TabIndex = 9;
+            this.txtColor.TabIndex = 2;
             // 
             // txtTalle
             // 
+            this.txtTalle.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTalle.Location = new System.Drawing.Point(153, 218);
             this.txtTalle.Name = "txtTalle";
             this.txtTalle.Size = new System.Drawing.Size(293, 22);
-            this.txtTalle.TabIndex = 10;
+            this.txtTalle.TabIndex = 3;
             // 
             // txtStock
             // 
+            this.txtStock.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStock.Location = new System.Drawing.Point(153, 271);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(293, 22);
-            this.txtStock.TabIndex = 11;
+            this.txtStock.TabIndex = 4;
             // 
             // txtPrecio
             // 
+            this.txtPrecio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrecio.Location = new System.Drawing.Point(153, 322);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(293, 22);
-            this.txtPrecio.TabIndex = 12;
+            this.txtPrecio.TabIndex = 5;
             // 
             // btnCancelar
             // 
@@ -137,7 +142,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(70, 388);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(101, 29);
-            this.btnCancelar.TabIndex = 14;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -148,18 +153,21 @@
             this.btnCargar.Location = new System.Drawing.Point(345, 388);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(101, 29);
-            this.btnCargar.TabIndex = 15;
+            this.btnCargar.TabIndex = 6;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // txtCodigo
             // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtCodigo.Location = new System.Drawing.Point(153, 29);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(293, 22);
             this.txtCodigo.TabIndex = 0;
+            this.txtCodigo.TabStop = false;
             // 
             // lblCodigo
             // 
@@ -173,10 +181,11 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Location = new System.Drawing.Point(153, 76);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(293, 22);
-            this.txtNombre.TabIndex = 16;
+            this.txtNombre.TabIndex = 0;
             // 
             // lblNombre
             // 

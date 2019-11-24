@@ -16,7 +16,7 @@ namespace TPF_Laboratorio_de_Programacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formStock());
+            Application.Run(new formMain());
         }
     }
 }

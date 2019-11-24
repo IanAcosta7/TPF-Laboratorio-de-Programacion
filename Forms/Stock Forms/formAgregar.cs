@@ -17,17 +17,6 @@ namespace TPF_Laboratorio_de_Programacion
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            /*
-             *agregar nuevo
-            *
-            * actualizarlista()
-             *
-             *
-             */
-        }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -35,6 +24,8 @@ namespace TPF_Laboratorio_de_Programacion
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
+            formMain fmMain = Application.OpenForms.OfType<formMain>().FirstOrDefault();
+
             // Funcionalidad de carga de producto
             string nombre = txtNombre.Text;
             string marca = txtMarca.Text;
@@ -47,9 +38,12 @@ namespace TPF_Laboratorio_de_Programacion
             // POR HACER
 
             // Creo el producto
-            Producto nuevo = new Producto(nombre, marca, color, talle, stock, precio);
+            Producto nuevo = new Producto(-1, nombre, marca, color, talle, stock, precio);
+
+            // Actualizo el formulario y la BD
             nuevo.actualizarDB();
-            
+            fmMain.actualizarDVGStock();
+
             this.Close();
         }
     }

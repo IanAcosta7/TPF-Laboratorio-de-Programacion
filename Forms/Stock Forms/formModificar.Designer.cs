@@ -30,7 +30,7 @@
         {
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.btnCargar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtStock = new System.Windows.Forms.TextBox();
@@ -58,20 +58,22 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Location = new System.Drawing.Point(153, 81);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(293, 22);
-            this.txtNombre.TabIndex = 32;
+            this.txtNombre.TabIndex = 0;
             // 
-            // btnCargar
+            // btnActualizar
             // 
-            this.btnCargar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCargar.Location = new System.Drawing.Point(345, 393);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(101, 29);
-            this.btnCargar.TabIndex = 31;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnActualizar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnActualizar.Location = new System.Drawing.Point(345, 393);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(101, 29);
+            this.btnActualizar.TabIndex = 6;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnCancelar
             // 
@@ -79,44 +81,50 @@
             this.btnCancelar.Location = new System.Drawing.Point(70, 393);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(101, 29);
-            this.btnCancelar.TabIndex = 30;
+            this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // txtPrecio
             // 
+            this.txtPrecio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrecio.Location = new System.Drawing.Point(153, 327);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(293, 22);
-            this.txtPrecio.TabIndex = 29;
+            this.txtPrecio.TabIndex = 5;
             // 
             // txtStock
             // 
+            this.txtStock.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStock.Location = new System.Drawing.Point(153, 276);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(293, 22);
-            this.txtStock.TabIndex = 28;
+            this.txtStock.TabIndex = 4;
             // 
             // txtTalle
             // 
+            this.txtTalle.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTalle.Location = new System.Drawing.Point(153, 223);
             this.txtTalle.Name = "txtTalle";
             this.txtTalle.Size = new System.Drawing.Size(293, 22);
-            this.txtTalle.TabIndex = 27;
+            this.txtTalle.TabIndex = 3;
             // 
             // txtColor
             // 
+            this.txtColor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtColor.Location = new System.Drawing.Point(153, 177);
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(293, 22);
-            this.txtColor.TabIndex = 26;
+            this.txtColor.TabIndex = 2;
             // 
             // txtMarca
             // 
+            this.txtMarca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMarca.Location = new System.Drawing.Point(153, 128);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(293, 22);
-            this.txtMarca.TabIndex = 25;
+            this.txtMarca.TabIndex = 1;
             // 
             // blPrecio
             // 
@@ -180,20 +188,24 @@
             // 
             // txtCodigo
             // 
+            this.txtCodigo.Enabled = false;
             this.txtCodigo.Location = new System.Drawing.Point(153, 34);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(293, 22);
             this.txtCodigo.TabIndex = 18;
+            this.txtCodigo.TabStop = false;
             // 
             // formModificar
             // 
+            this.AcceptButton = this.btnActualizar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(512, 453);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.btnCargar);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtStock);
@@ -222,7 +234,7 @@
 
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Button btnCargar;
+        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtStock;

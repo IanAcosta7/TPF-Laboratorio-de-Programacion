@@ -9,6 +9,7 @@ namespace TPF_Laboratorio_de_Programacion
 {
     class Producto
     {
+        public int id_producto;
         public string nombre;
         public string marca;
         public string color;
@@ -16,8 +17,9 @@ namespace TPF_Laboratorio_de_Programacion
         public int stock;
         public double precio;
 
-        public Producto (string newNombre, string newMarca, string newColor, double newTalle, int newStock, double newPrecio)
+        public Producto (int newID, string newNombre, string newMarca, string newColor, double newTalle, int newStock, double newPrecio)
         {
+            id_producto = newID;
             nombre = newNombre;
             marca = newMarca;
             color = newColor;
@@ -28,7 +30,7 @@ namespace TPF_Laboratorio_de_Programacion
 
         public void actualizarDB ()
         {
-            string cmd = string.Format("EXEC ActualizarProducto '{0}', '{1}', '{2}', '{3}', '{4}', '{5}'", this.nombre, this.marca, this.color, this.talle, this.stock, this.precio);
+            string cmd = string.Format("EXEC ActualizarProducto '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}'", this.id_producto, this.nombre, this.marca, this.color, this.talle, this.stock, this.precio);
             Utilidades.Ejecutar(cmd);
         }
 
@@ -36,6 +38,15 @@ namespace TPF_Laboratorio_de_Programacion
         {
             // Conexion BD
             string cmd = "SELECT * FROM Productos WHERE borrado=0";
+            DataSet ds = Utilidades.Ejecutar(cmd);
+
+            return ds;
+        }
+
+        public static DataSet getProductByName (string name)
+        {
+            // Conexion BD
+            string cmd = string.Format("SELECT * FROM Productos WHERE nombre='{0}'", name);
             DataSet ds = Utilidades.Ejecutar(cmd);
 
             return ds;
