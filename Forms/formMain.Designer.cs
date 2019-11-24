@@ -202,6 +202,18 @@
             this.tabVentas.TabIndex = 2;
             this.tabVentas.Text = "Ventas";
             this.tabVentas.UseVisualStyleBackColor = true;
+            this.tabVentas.Click += new System.EventHandler(this.TabVentas_Click);
+            // 
+            // tabCaja
+            // 
+            this.tabCaja.Location = new System.Drawing.Point(4, 25);
+            this.tabCaja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCaja.Name = "tabCaja";
+            this.tabCaja.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCaja.Size = new System.Drawing.Size(829, 479);
+            this.tabCaja.TabIndex = 1;
+            this.tabCaja.Text = "Caja";
+            this.tabCaja.UseVisualStyleBackColor = true;
             // 
             // tabCaja
             // 

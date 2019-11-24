@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\ErrorTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\ErrorTextBox.Designer.cs">
+      <DependentUpon>ErrorTextBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Stock Forms\formModificar.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -76,5 +76,15 @@ namespace TPF_Laboratorio_de_Programacion
                 MessageBox.Show("No se ha seleccionado ningún producto.");
             }
         }
+
+        private void dgvStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TabVentas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
