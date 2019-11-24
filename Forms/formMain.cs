@@ -34,7 +34,7 @@ namespace TPF_Laboratorio_de_Programacion
 
         private void formStock_Load(object sender, EventArgs e)
         {
-            //this.actualizarDVGStock();
+           // this.actualizarDVGStock();
         }
 
         public void actualizarDVGStock ()
@@ -68,6 +68,11 @@ namespace TPF_Laboratorio_de_Programacion
         }
 
         private void dgvStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TabVentas_Click(object sender, EventArgs e)
         {
 
         }

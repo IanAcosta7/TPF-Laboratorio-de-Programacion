@@ -28,22 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblColor = new System.Windows.Forms.Label();
             this.lblTalle = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
             this.blPrecio = new System.Windows.Forms.Label();
-            this.txtMarca = new System.Windows.Forms.TextBox();
-            this.txtColor = new System.Windows.Forms.TextBox();
-            this.txtTalle = new System.Windows.Forms.TextBox();
-            this.txtStock = new System.Windows.Forms.TextBox();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorTextBox5 = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
+            this.errorTextBox4 = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
+            this.errorTextBox3 = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
+            this.errorTextBox2 = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
+            this.errorTextBox1 = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
+            this.errorTextBox6 = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblMarca
@@ -96,41 +99,6 @@
             this.blPrecio.TabIndex = 7;
             this.blPrecio.Text = "Precio:";
             // 
-            // txtMarca
-            // 
-            this.txtMarca.Location = new System.Drawing.Point(153, 123);
-            this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(293, 22);
-            this.txtMarca.TabIndex = 8;
-            // 
-            // txtColor
-            // 
-            this.txtColor.Location = new System.Drawing.Point(153, 172);
-            this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(293, 22);
-            this.txtColor.TabIndex = 9;
-            // 
-            // txtTalle
-            // 
-            this.txtTalle.Location = new System.Drawing.Point(153, 218);
-            this.txtTalle.Name = "txtTalle";
-            this.txtTalle.Size = new System.Drawing.Size(293, 22);
-            this.txtTalle.TabIndex = 10;
-            // 
-            // txtStock
-            // 
-            this.txtStock.Location = new System.Drawing.Point(153, 271);
-            this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(293, 22);
-            this.txtStock.TabIndex = 11;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(153, 322);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(293, 22);
-            this.txtPrecio.TabIndex = 12;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -171,13 +139,6 @@
             this.lblCodigo.TabIndex = 3;
             this.lblCodigo.Text = "Código:";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(153, 76);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(293, 22);
-            this.txtNombre.TabIndex = 16;
-            // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
@@ -188,22 +149,74 @@
             this.lblNombre.TabIndex = 17;
             this.lblNombre.Text = "Nombre:";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorTextBox5
+            // 
+            this.errorTextBox5.Location = new System.Drawing.Point(153, 121);
+            this.errorTextBox5.Name = "errorTextBox5";
+            this.errorTextBox5.Size = new System.Drawing.Size(231, 22);
+            this.errorTextBox5.TabIndex = 22;
+            this.errorTextBox5.Validar = true;
+            // 
+            // errorTextBox4
+            // 
+            this.errorTextBox4.Location = new System.Drawing.Point(149, 271);
+            this.errorTextBox4.Name = "errorTextBox4";
+            this.errorTextBox4.Size = new System.Drawing.Size(231, 22);
+            this.errorTextBox4.TabIndex = 21;
+            this.errorTextBox4.Validar = true;
+            // 
+            // errorTextBox3
+            // 
+            this.errorTextBox3.Location = new System.Drawing.Point(149, 170);
+            this.errorTextBox3.Name = "errorTextBox3";
+            this.errorTextBox3.Size = new System.Drawing.Size(231, 22);
+            this.errorTextBox3.TabIndex = 20;
+            this.errorTextBox3.Validar = true;
+            // 
+            // errorTextBox2
+            // 
+            this.errorTextBox2.Location = new System.Drawing.Point(149, 216);
+            this.errorTextBox2.Name = "errorTextBox2";
+            this.errorTextBox2.Size = new System.Drawing.Size(231, 22);
+            this.errorTextBox2.TabIndex = 19;
+            this.errorTextBox2.Validar = true;
+            // 
+            // errorTextBox1
+            // 
+            this.errorTextBox1.Location = new System.Drawing.Point(149, 320);
+            this.errorTextBox1.Name = "errorTextBox1";
+            this.errorTextBox1.Size = new System.Drawing.Size(231, 22);
+            this.errorTextBox1.TabIndex = 18;
+            this.errorTextBox1.Validar = true;
+            // 
+            // errorTextBox6
+            // 
+            this.errorTextBox6.Location = new System.Drawing.Point(167, 73);
+            this.errorTextBox6.Name = "errorTextBox6";
+            this.errorTextBox6.Size = new System.Drawing.Size(100, 22);
+            this.errorTextBox6.TabIndex = 23;
+            this.errorTextBox6.Validar = true;
+            // 
             // formAgregar
             // 
             this.AcceptButton = this.btnCargar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(512, 453);
+            this.ClientSize = new System.Drawing.Size(512, 455);
+            this.Controls.Add(this.errorTextBox6);
+            this.Controls.Add(this.errorTextBox5);
+            this.Controls.Add(this.errorTextBox4);
+            this.Controls.Add(this.errorTextBox3);
+            this.Controls.Add(this.errorTextBox2);
+            this.Controls.Add(this.errorTextBox1);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.txtStock);
-            this.Controls.Add(this.txtTalle);
-            this.Controls.Add(this.txtColor);
-            this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.blPrecio);
             this.Controls.Add(this.lblStock);
             this.Controls.Add(this.lblTalle);
@@ -217,6 +230,8 @@
             this.MinimumSize = new System.Drawing.Size(530, 500);
             this.Name = "formAgregar";
             this.Text = "Nuevo Producto";
+            this.Load += new System.EventHandler(this.FormAgregar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,16 +243,18 @@
         private System.Windows.Forms.Label lblTalle;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label blPrecio;
-        private System.Windows.Forms.TextBox txtMarca;
-        private System.Windows.Forms.TextBox txtColor;
-        private System.Windows.Forms.TextBox txtTalle;
-        private System.Windows.Forms.TextBox txtStock;
-        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
+        public System.Windows.Forms.ErrorProvider errorProvider1;
+        private ErrorTextBox errorTextBox5;
+        private ErrorTextBox errorTextBox4;
+        private ErrorTextBox errorTextBox3;
+        private ErrorTextBox errorTextBox2;
+        private ErrorTextBox errorTextBox1;
+        private ErrorTextBox errorTextBox6;
+        // private TPF_Laboratorio_de_Programacion.Classes.ErrorTextBox;
     }
 }

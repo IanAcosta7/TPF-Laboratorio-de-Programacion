@@ -32,17 +32,17 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.dgvStock = new System.Windows.Forms.DataGridView();
-            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colColor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage = new System.Windows.Forms.TabControl();
-            this.tabCaja = new System.Windows.Forms.TabPage();
             this.tabStock = new System.Windows.Forms.TabPage();
             this.tabVentas = new System.Windows.Forms.TabPage();
+            this.tabCaja = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             this.tabPage.SuspendLayout();
             this.tabStock.SuspendLayout();
@@ -51,10 +51,10 @@
             // btnAgregar
             // 
             this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregar.Location = new System.Drawing.Point(5, 12);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 12, 11, 2);
+            this.btnAgregar.Location = new System.Drawing.Point(7, 15);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 15, 15, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(68, 24);
+            this.btnAgregar.Size = new System.Drawing.Size(91, 30);
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -63,10 +63,10 @@
             // btnBorrar
             // 
             this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBorrar.Location = new System.Drawing.Point(167, 12);
-            this.btnBorrar.Margin = new System.Windows.Forms.Padding(2, 12, 11, 2);
+            this.btnBorrar.Location = new System.Drawing.Point(223, 15);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(3, 15, 15, 2);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(68, 24);
+            this.btnBorrar.Size = new System.Drawing.Size(91, 30);
             this.btnBorrar.TabIndex = 1;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
@@ -75,10 +75,10 @@
             // btnModificar
             // 
             this.btnModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnModificar.Location = new System.Drawing.Point(86, 12);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 12, 11, 2);
+            this.btnModificar.Location = new System.Drawing.Point(115, 15);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 15, 15, 2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(68, 24);
+            this.btnModificar.Size = new System.Drawing.Size(91, 30);
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -105,8 +105,8 @@
             this.colColor,
             this.colCodigo});
             this.dgvStock.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvStock.Location = new System.Drawing.Point(-4, 43);
-            this.dgvStock.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvStock.Location = new System.Drawing.Point(-5, 53);
+            this.dgvStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvStock.MultiSelect = false;
             this.dgvStock.Name = "dgvStock";
             this.dgvStock.ReadOnly = true;
@@ -115,51 +115,9 @@
             this.dgvStock.RowTemplate.Height = 24;
             this.dgvStock.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStock.Size = new System.Drawing.Size(628, 348);
+            this.dgvStock.Size = new System.Drawing.Size(837, 428);
             this.dgvStock.TabIndex = 4;
             this.dgvStock.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStock_CellContentClick);
-            // 
-            // colCodigo
-            // 
-            this.colCodigo.HeaderText = "Codigo";
-            this.colCodigo.MinimumWidth = 6;
-            this.colCodigo.Name = "colCodigo";
-            this.colCodigo.ReadOnly = true;
-            // 
-            // colColor
-            // 
-            this.colColor.HeaderText = "Color";
-            this.colColor.MinimumWidth = 6;
-            this.colColor.Name = "colColor";
-            this.colColor.ReadOnly = true;
-            // 
-            // colTalle
-            // 
-            this.colTalle.HeaderText = "Talle";
-            this.colTalle.MinimumWidth = 6;
-            this.colTalle.Name = "colTalle";
-            this.colTalle.ReadOnly = true;
-            // 
-            // colPrecio
-            // 
-            this.colPrecio.HeaderText = "Precio";
-            this.colPrecio.MinimumWidth = 6;
-            this.colPrecio.Name = "colPrecio";
-            this.colPrecio.ReadOnly = true;
-            // 
-            // colStock
-            // 
-            this.colStock.HeaderText = "Stock";
-            this.colStock.MinimumWidth = 6;
-            this.colStock.Name = "colStock";
-            this.colStock.ReadOnly = true;
-            // 
-            // colMarca
-            // 
-            this.colMarca.HeaderText = "Marca";
-            this.colMarca.MinimumWidth = 6;
-            this.colMarca.Name = "colMarca";
-            this.colMarca.ReadOnly = true;
             // 
             // colNombre
             // 
@@ -168,6 +126,48 @@
             this.colNombre.Name = "colNombre";
             this.colNombre.ReadOnly = true;
             // 
+            // colMarca
+            // 
+            this.colMarca.HeaderText = "Marca";
+            this.colMarca.MinimumWidth = 6;
+            this.colMarca.Name = "colMarca";
+            this.colMarca.ReadOnly = true;
+            // 
+            // colStock
+            // 
+            this.colStock.HeaderText = "Stock";
+            this.colStock.MinimumWidth = 6;
+            this.colStock.Name = "colStock";
+            this.colStock.ReadOnly = true;
+            // 
+            // colPrecio
+            // 
+            this.colPrecio.HeaderText = "Precio";
+            this.colPrecio.MinimumWidth = 6;
+            this.colPrecio.Name = "colPrecio";
+            this.colPrecio.ReadOnly = true;
+            // 
+            // colTalle
+            // 
+            this.colTalle.HeaderText = "Talle";
+            this.colTalle.MinimumWidth = 6;
+            this.colTalle.Name = "colTalle";
+            this.colTalle.ReadOnly = true;
+            // 
+            // colColor
+            // 
+            this.colColor.HeaderText = "Color";
+            this.colColor.MinimumWidth = 6;
+            this.colColor.Name = "colColor";
+            this.colColor.ReadOnly = true;
+            // 
+            // colCodigo
+            // 
+            this.colCodigo.HeaderText = "Codigo";
+            this.colCodigo.MinimumWidth = 6;
+            this.colCodigo.Name = "colCodigo";
+            this.colCodigo.ReadOnly = true;
+            // 
             // tabPage
             // 
             this.tabPage.Controls.Add(this.tabStock);
@@ -175,20 +175,11 @@
             this.tabPage.Controls.Add(this.tabCaja);
             this.tabPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPage.Location = new System.Drawing.Point(0, 0);
+            this.tabPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage.Name = "tabPage";
             this.tabPage.SelectedIndex = 0;
-            this.tabPage.Size = new System.Drawing.Size(628, 413);
+            this.tabPage.Size = new System.Drawing.Size(837, 508);
             this.tabPage.TabIndex = 5;
-            // 
-            // tabCaja
-            // 
-            this.tabCaja.Location = new System.Drawing.Point(4, 22);
-            this.tabCaja.Name = "tabCaja";
-            this.tabCaja.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCaja.Size = new System.Drawing.Size(620, 387);
-            this.tabCaja.TabIndex = 1;
-            this.tabCaja.Text = "Caja";
-            this.tabCaja.UseVisualStyleBackColor = true;
             // 
             // tabStock
             // 
@@ -197,31 +188,45 @@
             this.tabStock.Controls.Add(this.btnAgregar);
             this.tabStock.Controls.Add(this.btnBorrar);
             this.tabStock.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabStock.Location = new System.Drawing.Point(4, 22);
+            this.tabStock.Location = new System.Drawing.Point(4, 25);
+            this.tabStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabStock.Name = "tabStock";
-            this.tabStock.Padding = new System.Windows.Forms.Padding(3);
-            this.tabStock.Size = new System.Drawing.Size(620, 387);
+            this.tabStock.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabStock.Size = new System.Drawing.Size(829, 479);
             this.tabStock.TabIndex = 0;
             this.tabStock.Text = "Stock";
             this.tabStock.UseVisualStyleBackColor = true;
             // 
             // tabVentas
             // 
-            this.tabVentas.Location = new System.Drawing.Point(4, 22);
+            this.tabVentas.Location = new System.Drawing.Point(4, 25);
+            this.tabVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabVentas.Name = "tabVentas";
-            this.tabVentas.Size = new System.Drawing.Size(620, 387);
+            this.tabVentas.Size = new System.Drawing.Size(829, 479);
             this.tabVentas.TabIndex = 2;
             this.tabVentas.Text = "Ventas";
             this.tabVentas.UseVisualStyleBackColor = true;
+            this.tabVentas.Click += new System.EventHandler(this.TabVentas_Click);
+            // 
+            // tabCaja
+            // 
+            this.tabCaja.Location = new System.Drawing.Point(4, 25);
+            this.tabCaja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCaja.Name = "tabCaja";
+            this.tabCaja.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCaja.Size = new System.Drawing.Size(829, 479);
+            this.tabCaja.TabIndex = 1;
+            this.tabCaja.Text = "Caja";
+            this.tabCaja.UseVisualStyleBackColor = true;
             // 
             // formStock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 413);
+            this.ClientSize = new System.Drawing.Size(837, 508);
             this.Controls.Add(this.tabPage);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MinimumSize = new System.Drawing.Size(642, 430);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(850, 519);
             this.Name = "formStock";
             this.Text = "Nombre del programa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
