@@ -22,5 +22,11 @@ namespace TPF_Laboratorio_de_Programacion
             get;
             set;
         } 
+        
+        public Boolean ValidarDoble 
+        {
+            get;
+            set;
+        } 
     }
 }

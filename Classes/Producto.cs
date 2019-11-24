@@ -68,19 +68,35 @@ namespace TPF_Laboratorio_de_Programacion
                 {
                     ErrorTextBox Obj = (ErrorTextBox)Item;
 
-                    if (Obj.Validar == true)
+                    if (Obj.Validar)
                     {
-                        // Validaciones
-                        if (string.IsNullOrEmpty(Obj.Text.Trim())) //Si esta vacio o nulo mi ErrorTextBix, activa el Error Provider
+                        // ----- Validaciones -----
+                        // Campo vacio o NULL
+                        if (string.IsNullOrEmpty(Obj.Text.Trim()))
                         {
                             ErrorProvider.SetError(Obj, "Debe completar todos los campos");
                             HayErrores = true;
                         }
 
-                        if (Obj.Name == "txtNombre" && nombreExistente(Obj.Text))
+                        // Validacion nombre
+                        if (Obj.Name == "txtNombre" && nombreExistente(Obj.Text) && !Obj.ValidarDoble)
                         {
                             ErrorProvider.SetError(Obj, "El nombre ya existe");
                         }
+
+                        // Validacion talle y precio
+                        if ((Obj.Name == "txtPrecio" || Obj.Name == "txtTalle") && Double.IsNaN(Convert.ToDouble(Obj.Text)))
+                        {
+                            ErrorProvider.SetError(Obj, "Solo se aceptan valores decimales");
+                        }
+
+                        // Validación stock
+                        //int result;
+                        //if (Obj.Name == "txtStock" && Int32.TryParse(Obj.Text, out result))
+                        //{
+                        //    ErrorProvider.SetError(Obj, "No es un número entero");
+                        //}
+
                     }
                     else
                     {

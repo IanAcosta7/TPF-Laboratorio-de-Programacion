@@ -53,26 +53,50 @@ namespace TPF_Laboratorio_de_Programacion
         {
             formMain fmMain = Application.OpenForms.OfType<formMain>().FirstOrDefault();
 
-            // Funcionalidad de carga de producto
-            int id_producto = Convert.ToInt32(txtCodigo.Text);
-            string nombre = txtNombre.Text;
-            string marca = txtMarca.Text;
-            string color = txtColor.Text;
-            double talle = Convert.ToDouble(txtTalle.Text);
-            int stock = Convert.ToInt32(txtStock.Text);
-            double precio = Convert.ToDouble(txtPrecio.Text);
+            if (!Producto.validarFormulario(this, errProv))
+            {
+                //Funcionalidad de carga de producto
+                int id_producto = Convert.ToInt32(txtCodigo.Text);
+                string nombre = txtNombre.Text;
+                string marca = txtMarca.Text;
+                string color = txtColor.Text;
+                double talle = Convert.ToDouble(txtTalle.Text);
+                int stock = Convert.ToInt32(txtStock.Text);
+                double precio = Convert.ToDouble(txtPrecio.Text);
 
-            // Validaciones
-            // POR HACER
+                // Creo el producto
+                Producto nuevo = new Producto(id_producto, nombre, marca, color, talle, stock, precio);
 
-            // Creo el producto
-            Producto nuevo = new Producto(id_producto, nombre, marca, color, talle, stock, precio);
+                // Actualizo el formulario y la BD
+                nuevo.actualizarDB();
+                fmMain.actualizarDVGStock();
 
-            // Actualizo el formulario y la BD
-            nuevo.actualizarDB();
-            fmMain.actualizarDVGStock();
+                this.Close();
+            }
 
-            this.Close();
+
+            //formMain fmMain = Application.OpenForms.OfType<formMain>().FirstOrDefault();
+
+            //// Funcionalidad de carga de producto
+            //int id_producto = Convert.ToInt32(txtCodigo.Text);
+            //string nombre = txtNombre.Text;
+            //string marca = txtMarca.Text;
+            //string color = txtColor.Text;
+            //double talle = Convert.ToDouble(txtTalle.Text);
+            //int stock = Convert.ToInt32(txtStock.Text);
+            //double precio = Convert.ToDouble(txtPrecio.Text);
+
+            //// Validaciones
+            //// POR HACER
+
+            //// Creo el producto
+            //Producto nuevo = new Producto(id_producto, nombre, marca, color, talle, stock, precio);
+
+            //// Actualizo el formulario y la BD
+            //nuevo.actualizarDB();
+            //fmMain.actualizarDVGStock();
+
+            //this.Close();
         }
     }
 }

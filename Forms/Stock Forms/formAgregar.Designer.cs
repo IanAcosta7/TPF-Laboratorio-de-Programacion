@@ -36,8 +36,6 @@
             this.blPrecio = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.errProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtMarca = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
@@ -53,7 +51,7 @@
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(67, 126);
+            this.lblMarca.Location = new System.Drawing.Point(24, 59);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(57, 17);
             this.lblMarca.TabIndex = 1;
@@ -63,7 +61,7 @@
             // 
             this.lblColor.AutoSize = true;
             this.lblColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblColor.Location = new System.Drawing.Point(67, 175);
+            this.lblColor.Location = new System.Drawing.Point(24, 87);
             this.lblColor.Name = "lblColor";
             this.lblColor.Size = new System.Drawing.Size(51, 17);
             this.lblColor.TabIndex = 4;
@@ -73,7 +71,7 @@
             // 
             this.lblTalle.AutoSize = true;
             this.lblTalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTalle.Location = new System.Drawing.Point(67, 225);
+            this.lblTalle.Location = new System.Drawing.Point(24, 115);
             this.lblTalle.Name = "lblTalle";
             this.lblTalle.Size = new System.Drawing.Size(49, 17);
             this.lblTalle.TabIndex = 5;
@@ -83,7 +81,7 @@
             // 
             this.lblStock.AutoSize = true;
             this.lblStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.Location = new System.Drawing.Point(67, 274);
+            this.lblStock.Location = new System.Drawing.Point(24, 143);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(53, 17);
             this.lblStock.TabIndex = 6;
@@ -93,7 +91,7 @@
             // 
             this.blPrecio.AutoSize = true;
             this.blPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blPrecio.Location = new System.Drawing.Point(67, 325);
+            this.blPrecio.Location = new System.Drawing.Point(24, 171);
             this.blPrecio.Name = "blPrecio";
             this.blPrecio.Size = new System.Drawing.Size(59, 17);
             this.blPrecio.TabIndex = 7;
@@ -102,7 +100,7 @@
             // btnCancelar
             // 
             this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.Location = new System.Drawing.Point(70, 388);
+            this.btnCancelar.Location = new System.Drawing.Point(27, 224);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(101, 29);
             this.btnCancelar.TabIndex = 7;
@@ -113,7 +111,7 @@
             // btnCargar
             // 
             this.btnCargar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCargar.Location = new System.Drawing.Point(345, 388);
+            this.btnCargar.Location = new System.Drawing.Point(239, 224);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(101, 29);
             this.btnCargar.TabIndex = 6;
@@ -121,32 +119,11 @@
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtCodigo.Location = new System.Drawing.Point(153, 29);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.ReadOnly = true;
-            this.txtCodigo.Size = new System.Drawing.Size(293, 22);
-            this.txtCodigo.TabIndex = 0;
-            this.txtCodigo.TabStop = false;
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(67, 32);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(63, 17);
-            this.lblCodigo.TabIndex = 3;
-            this.lblCodigo.Text = "Código:";
-            // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(67, 79);
+            this.lblNombre.Location = new System.Drawing.Point(24, 31);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(69, 17);
             this.lblNombre.TabIndex = 17;
@@ -154,59 +131,60 @@
             // 
             // errProv
             // 
+            this.errProv.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errProv.ContainerControl = this;
             // 
             // txtMarca
             // 
             this.txtMarca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMarca.Location = new System.Drawing.Point(153, 123);
+            this.txtMarca.Location = new System.Drawing.Point(110, 56);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(293, 22);
+            this.txtMarca.Size = new System.Drawing.Size(230, 22);
             this.txtMarca.TabIndex = 1;
             this.txtMarca.Validar = true;
             // 
             // txtStock
             // 
             this.txtStock.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtStock.Location = new System.Drawing.Point(153, 271);
+            this.txtStock.Location = new System.Drawing.Point(110, 140);
             this.txtStock.Name = "txtStock";
-            this.txtStock.Size = new System.Drawing.Size(293, 22);
+            this.txtStock.Size = new System.Drawing.Size(230, 22);
             this.txtStock.TabIndex = 4;
             this.txtStock.Validar = true;
             // 
             // txtColor
             // 
             this.txtColor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtColor.Location = new System.Drawing.Point(153, 172);
+            this.txtColor.Location = new System.Drawing.Point(110, 84);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(293, 22);
+            this.txtColor.Size = new System.Drawing.Size(230, 22);
             this.txtColor.TabIndex = 2;
             this.txtColor.Validar = true;
             // 
             // txtTalle
             // 
             this.txtTalle.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTalle.Location = new System.Drawing.Point(153, 222);
+            this.txtTalle.Location = new System.Drawing.Point(110, 112);
             this.txtTalle.Name = "txtTalle";
-            this.txtTalle.Size = new System.Drawing.Size(293, 22);
+            this.txtTalle.Size = new System.Drawing.Size(230, 22);
             this.txtTalle.TabIndex = 3;
             this.txtTalle.Validar = true;
             // 
             // txtPrecio
             // 
             this.txtPrecio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPrecio.Location = new System.Drawing.Point(153, 322);
+            this.txtPrecio.Location = new System.Drawing.Point(110, 168);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(293, 22);
+            this.txtPrecio.Size = new System.Drawing.Size(230, 22);
             this.txtPrecio.TabIndex = 5;
             this.txtPrecio.Validar = true;
             // 
             // txtNombre
             // 
             this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNombre.Location = new System.Drawing.Point(153, 76);
+            this.txtNombre.Location = new System.Drawing.Point(110, 28);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(293, 22);
+            this.txtNombre.Size = new System.Drawing.Size(230, 22);
             this.txtNombre.TabIndex = 0;
             this.txtNombre.Validar = true;
             // 
@@ -216,7 +194,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(512, 453);
+            this.ClientSize = new System.Drawing.Size(367, 278);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtMarca);
             this.Controls.Add(this.txtStock);
@@ -230,13 +208,11 @@
             this.Controls.Add(this.lblStock);
             this.Controls.Add(this.lblTalle);
             this.Controls.Add(this.lblColor);
-            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblMarca);
-            this.Controls.Add(this.txtCodigo);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(530, 500);
+            this.MaximumSize = new System.Drawing.Size(385, 325);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(530, 500);
+            this.MinimumSize = new System.Drawing.Size(385, 325);
             this.Name = "formAgregar";
             this.Text = "Nuevo Producto";
             ((System.ComponentModel.ISupportInitialize)(this.errProv)).EndInit();
@@ -253,8 +229,6 @@
         private System.Windows.Forms.Label blPrecio;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnCargar;
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblNombre;
         public System.Windows.Forms.ErrorProvider errProv;
         private ErrorTextBox txtMarca;
