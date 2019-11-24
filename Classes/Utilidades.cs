@@ -20,7 +20,6 @@ namespace TPF_Laboratorio_de_Programacion
 
             try { 
                 con.Open();
-                MessageBox.Show("CORRECTO: ");
                 DP.Fill(DS);
             }
             catch (Exception err)
@@ -31,12 +30,5 @@ namespace TPF_Laboratorio_de_Programacion
 
             return DS;
         }
-
-        
-
-
-
-
-        
     }
 }

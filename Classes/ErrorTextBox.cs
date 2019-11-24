@@ -21,8 +21,6 @@ namespace TPF_Laboratorio_de_Programacion
         {
             get;
             set;
-        }
-
-      
+        } 
     }
 }

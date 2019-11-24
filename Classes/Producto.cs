@@ -1,4 +1,4 @@
-﻿Susing System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,7 +33,6 @@ namespace TPF_Laboratorio_de_Programacion
         {
             string cmd = string.Format("EXEC ActualizarProducto '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}'", this.id_producto, this.nombre, this.marca, this.color, this.talle, this.stock, this.precio);
             Utilidades.Ejecutar(cmd);
-
         }
 
         public static DataSet getAllProducts()
@@ -71,27 +70,40 @@ namespace TPF_Laboratorio_de_Programacion
 
                     if (Obj.Validar == true)
                     {
+                        // Validaciones
                         if (string.IsNullOrEmpty(Obj.Text.Trim())) //Si esta vacio o nulo mi ErrorTextBix, activa el Error Provider
                         {
                             ErrorProvider.SetError(Obj, "Debe completar todos los campos");
+                            HayErrores = true;
                         }
 
-                        /* if(condicion para comparar strings)
-                    {
-                        ErrorProvider.SetError
-                    }
-                    }*/
+                        if (Obj.Name == "txtNombre" && nombreExistente(Obj.Text))
+                        {
+                            ErrorProvider.SetError(Obj, "El nombre ya existe");
+                        }
                     }
                     else
                     {
                         ErrorProvider.SetError(Obj, "");////en su momento se puede sacar
                     }
-
-                   
                 }
             }
             return HayErrores;
         } 
 
+        public static Boolean nombreExistente (string nombre)
+        {
+            Boolean existe = false;
+
+            DataTable productos = Producto.getAllProducts().Tables[0];
+
+            foreach (DataRow fila in productos.Rows)
+            {
+                if (nombre == fila["nombre"].ToString())
+                    existe = true;
+            }
+
+            return existe;
+        }
     }
-    }
+}

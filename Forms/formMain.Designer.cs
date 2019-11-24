@@ -202,7 +202,6 @@
             this.tabVentas.TabIndex = 2;
             this.tabVentas.Text = "Ventas";
             this.tabVentas.UseVisualStyleBackColor = true;
-            this.tabVentas.Click += new System.EventHandler(this.TabVentas_Click);
             // 
             // tabCaja
             // 

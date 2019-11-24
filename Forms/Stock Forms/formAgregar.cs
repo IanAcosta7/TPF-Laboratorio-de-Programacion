@@ -27,62 +27,25 @@ namespace TPF_Laboratorio_de_Programacion
         {
             formMain fmMain = Application.OpenForms.OfType<formMain>().FirstOrDefault();
 
-            // Funcionalidad de carga de producto
-            string nombre = txtNombre.Text;
-            string marca = txtMarca.Text;
-            string color = txtColor.Text;
-            double talle = Convert.ToDouble(txtTalle.Text);
-            int stock = Convert.ToInt32(txtStock.Text);
-            double precio = Convert.ToDouble(txtPrecio.Text);
+            if (!Producto.validarFormulario(this, errProv))
+            {
+                //Funcionalidad de carga de producto
+                string nombre = txtNombre.Text;
+                string marca = txtMarca.Text;
+                string color = txtColor.Text;
+                double talle = Convert.ToDouble(txtTalle.Text);
+                int stock = Convert.ToInt32(txtStock.Text);
+                double precio = Convert.ToDouble(txtPrecio.Text);
 
-             // Validaciones
-             // POR HACER ..*/
-            // Creo el producto
-            Producto nuevo = new Producto(-1, nombre, marca, color, talle, stock, precio);
+                // Creo el producto
+                Producto nuevo = new Producto(-1, nombre, marca, color, talle, stock, precio);
 
-            // Actualizo el formulario y la BD
-            nuevo.actualizarDB();
-            fmMain.actualizarDVGStock();
+                // Actualizo el formulario y la BD
+                nuevo.actualizarDB();
+                fmMain.actualizarDVGStock();
 
-            this.Close();
-            // Producto nuevo = new Producto(nombre, marca, color, talle, stock, precio);
-             /* try  
-              {
-                   nuevo.actualizarDB();
-                  string cmd = string.Format("EXEC ActualizarProducto '{0}','{1}','{2}','{3}','{4}','{5}'", nombre,marca, color,talle, stock,precio);
-                 Utilidades.Ejecutar(cmd);
-                  MessageBox.Show("ACTUALIZADO ");  
-
-              }catch  (Exception ERROR)
-              {
-                  MessageBox.Show("ERROR::" + ERROR.Message);
-
-              }*/
-            //nuevo.actualizarDB();
-           
-           // this.Close();
-            
+                this.Close();
+            }
        }
-   
-
-        private void TxtTalle_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtColor_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ErrorTextBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormAgregar_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
