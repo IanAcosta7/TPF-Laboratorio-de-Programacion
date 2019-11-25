@@ -171,7 +171,7 @@
             this.tabPage.Controls.Add(this.tabCaja);
             this.tabPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPage.Location = new System.Drawing.Point(0, 0);
-            this.tabPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage.Name = "tabPage";
             this.tabPage.SelectedIndex = 0;
             this.tabPage.Size = new System.Drawing.Size(837, 508);
@@ -185,9 +185,9 @@
             this.tabStock.Controls.Add(this.btnBorrar);
             this.tabStock.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabStock.Location = new System.Drawing.Point(4, 25);
-            this.tabStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabStock.Margin = new System.Windows.Forms.Padding(4);
             this.tabStock.Name = "tabStock";
-            this.tabStock.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabStock.Padding = new System.Windows.Forms.Padding(4);
             this.tabStock.Size = new System.Drawing.Size(829, 479);
             this.tabStock.TabIndex = 0;
             this.tabStock.Text = "Stock";
@@ -196,7 +196,7 @@
             // tabVentas
             // 
             this.tabVentas.Location = new System.Drawing.Point(4, 25);
-            this.tabVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabVentas.Margin = new System.Windows.Forms.Padding(4);
             this.tabVentas.Name = "tabVentas";
             this.tabVentas.Size = new System.Drawing.Size(829, 479);
             this.tabVentas.TabIndex = 2;
@@ -206,20 +206,9 @@
             // tabCaja
             // 
             this.tabCaja.Location = new System.Drawing.Point(4, 25);
-            this.tabCaja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCaja.Margin = new System.Windows.Forms.Padding(4);
             this.tabCaja.Name = "tabCaja";
-            this.tabCaja.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabCaja.Size = new System.Drawing.Size(829, 479);
-            this.tabCaja.TabIndex = 1;
-            this.tabCaja.Text = "Caja";
-            this.tabCaja.UseVisualStyleBackColor = true;
-            // 
-            // tabCaja
-            // 
-            this.tabCaja.Location = new System.Drawing.Point(4, 25);
-            this.tabCaja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabCaja.Name = "tabCaja";
-            this.tabCaja.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCaja.Padding = new System.Windows.Forms.Padding(4);
             this.tabCaja.Size = new System.Drawing.Size(829, 479);
             this.tabCaja.TabIndex = 1;
             this.tabCaja.Text = "Caja";
