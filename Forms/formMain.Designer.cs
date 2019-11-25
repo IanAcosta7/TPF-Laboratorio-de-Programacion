@@ -42,10 +42,18 @@
             this.tabPage = new System.Windows.Forms.TabControl();
             this.tabStock = new System.Windows.Forms.TabPage();
             this.tabVentas = new System.Windows.Forms.TabPage();
+            this.dvgCarrito = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnVaciar = new System.Windows.Forms.Button();
+            this.btnAñadir = new System.Windows.Forms.Button();
             this.tabCaja = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             this.tabPage.SuspendLayout();
             this.tabStock.SuspendLayout();
+            this.tabVentas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgCarrito)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAgregar
@@ -174,7 +182,7 @@
             this.tabPage.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage.Name = "tabPage";
             this.tabPage.SelectedIndex = 0;
-            this.tabPage.Size = new System.Drawing.Size(837, 508);
+            this.tabPage.Size = new System.Drawing.Size(850, 518);
             this.tabPage.TabIndex = 5;
             // 
             // tabStock
@@ -188,20 +196,93 @@
             this.tabStock.Margin = new System.Windows.Forms.Padding(4);
             this.tabStock.Name = "tabStock";
             this.tabStock.Padding = new System.Windows.Forms.Padding(4);
-            this.tabStock.Size = new System.Drawing.Size(829, 479);
+            this.tabStock.Size = new System.Drawing.Size(842, 489);
             this.tabStock.TabIndex = 0;
             this.tabStock.Text = "Stock";
             this.tabStock.UseVisualStyleBackColor = true;
             // 
             // tabVentas
             // 
+            this.tabVentas.Controls.Add(this.dvgCarrito);
+            this.tabVentas.Controls.Add(this.btnVaciar);
+            this.tabVentas.Controls.Add(this.btnAñadir);
             this.tabVentas.Location = new System.Drawing.Point(4, 25);
             this.tabVentas.Margin = new System.Windows.Forms.Padding(4);
             this.tabVentas.Name = "tabVentas";
-            this.tabVentas.Size = new System.Drawing.Size(829, 479);
+            this.tabVentas.Size = new System.Drawing.Size(842, 489);
             this.tabVentas.TabIndex = 2;
             this.tabVentas.Text = "Ventas";
             this.tabVentas.UseVisualStyleBackColor = true;
+            // 
+            // dvgCarrito
+            // 
+            this.dvgCarrito.AllowUserToAddRows = false;
+            this.dvgCarrito.AllowUserToDeleteRows = false;
+            this.dvgCarrito.AllowUserToOrderColumns = true;
+            this.dvgCarrito.AllowUserToResizeColumns = false;
+            this.dvgCarrito.AllowUserToResizeRows = false;
+            this.dvgCarrito.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dvgCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dvgCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgCarrito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn4,
+            this.Descripcion});
+            this.dvgCarrito.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dvgCarrito.Location = new System.Drawing.Point(8, 46);
+            this.dvgCarrito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dvgCarrito.MultiSelect = false;
+            this.dvgCarrito.Name = "dvgCarrito";
+            this.dvgCarrito.ReadOnly = true;
+            this.dvgCarrito.RowHeadersVisible = false;
+            this.dvgCarrito.RowHeadersWidth = 51;
+            this.dvgCarrito.RowTemplate.Height = 24;
+            this.dvgCarrito.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dvgCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dvgCarrito.Size = new System.Drawing.Size(814, 394);
+            this.dvgCarrito.TabIndex = 11;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.MinimumWidth = 6;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // btnVaciar
+            // 
+            this.btnVaciar.Location = new System.Drawing.Point(668, 448);
+            this.btnVaciar.Name = "btnVaciar";
+            this.btnVaciar.Size = new System.Drawing.Size(141, 23);
+            this.btnVaciar.TabIndex = 10;
+            this.btnVaciar.Text = "Vaciar Carrito";
+            this.btnVaciar.UseVisualStyleBackColor = true;
+            // 
+            // btnAñadir
+            // 
+            this.btnAñadir.Location = new System.Drawing.Point(8, 18);
+            this.btnAñadir.Name = "btnAñadir";
+            this.btnAñadir.Size = new System.Drawing.Size(75, 23);
+            this.btnAñadir.TabIndex = 9;
+            this.btnAñadir.Text = "Añadir";
+            this.btnAñadir.UseVisualStyleBackColor = true;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             // 
             // tabCaja
             // 
@@ -218,7 +299,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 508);
+            this.ClientSize = new System.Drawing.Size(850, 518);
             this.Controls.Add(this.tabPage);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(850, 518);
@@ -229,6 +310,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();
             this.tabPage.ResumeLayout(false);
             this.tabStock.ResumeLayout(false);
+            this.tabVentas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dvgCarrito)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,6 +333,12 @@
         private System.Windows.Forms.TabPage tabStock;
         private System.Windows.Forms.TabPage tabCaja;
         private System.Windows.Forms.TabPage tabVentas;
+        private System.Windows.Forms.Button btnAñadir;
+        private System.Windows.Forms.Button btnVaciar;
+        private System.Windows.Forms.DataGridView dvgCarrito;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }
 }
 
