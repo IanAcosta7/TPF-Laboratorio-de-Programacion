@@ -31,17 +31,17 @@ namespace TPF_Laboratorio_de_Programacion
 
         public void actualizarDB()
         {
-            string cmd = string.Format("EXEC ActualizarProducto '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}'", this.id_producto, this.nombre, this.marca, this.color, this.talle, this.stock, this.precio);
+            string cmd = string.Format("EXEC ActualizarProducto '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}'", this.id_producto, this.nombre, this.marca, this.color, this.talle.ToString().Replace(',', '.'), this.stock, this.precio.ToString().Replace(',', '.'));
             Utilidades.Ejecutar(cmd);
         }
 
-        public static DataSet getAllProducts()
+        public static DataTable getAllProducts()
         {
             // Conexion BD
             string cmd = "SELECT * FROM Productos WHERE borrado=0";
             DataSet ds = Utilidades.Ejecutar(cmd);
 
-            return ds;
+            return ds.Tables[0];
         }
 
         public static DataSet getProductByName (string name)
@@ -62,11 +62,20 @@ namespace TPF_Laboratorio_de_Programacion
         public static Boolean validarFormulario(Control Objeto, ErrorProvider ErrorProvider)
         {
             Boolean HayErrores = false;
+
+            // Se busca el ID del producto en cuestion para la comprobacion de nombre
+            int id = -1;
+            Control[] idControl = Objeto.Controls.Find("txtCodigo", true);
+            if (idControl.Length > 0)
+                id = Int32.Parse(((TextBox)idControl[0]).Text);
+
             foreach (Control Item in Objeto.Controls) //revisa cada objeto uno x uno
             {
                 if (Item is ErrorTextBox)
                 {
                     ErrorTextBox Obj = (ErrorTextBox)Item;
+                    Double dbResult;
+                    int iResult;
 
                     if (Obj.Validar)
                     {
@@ -76,27 +85,22 @@ namespace TPF_Laboratorio_de_Programacion
                         {
                             ErrorProvider.SetError(Obj, "Debe completar todos los campos");
                             HayErrores = true;
-                        }
-
+                        } else if (Obj.Name == "txtNombre" && validarNombre(Obj.Text, id)) //nombreExistente(Obj.Text) && !Obj.ValidarDoble) 
                         // Validacion nombre
-                        if (Obj.Name == "txtNombre" && nombreExistente(Obj.Text) && !Obj.ValidarDoble)
                         {
                             ErrorProvider.SetError(Obj, "El nombre ya existe");
-                        }
-
+                            HayErrores = true;
+                        } else if ((Obj.Name == "txtPrecio" || Obj.Name == "txtTalle") && !Double.TryParse(Obj.Text, out dbResult))
                         // Validacion talle y precio
-                        if ((Obj.Name == "txtPrecio" || Obj.Name == "txtTalle") && Double.IsNaN(Convert.ToDouble(Obj.Text)))
                         {
                             ErrorProvider.SetError(Obj, "Solo se aceptan valores decimales");
-                        }
-
+                            HayErrores = true;
+                        } else if (Obj.Name == "txtStock" && !Int32.TryParse(Obj.Text, out iResult))
                         // Validación stock
-                        //int result;
-                        //if (Obj.Name == "txtStock" && Int32.TryParse(Obj.Text, out result))
-                        //{
-                        //    ErrorProvider.SetError(Obj, "No es un número entero");
-                        //}
-
+                        {
+                            ErrorProvider.SetError(Obj, "No es un número entero");
+                            HayErrores = true;
+                        }
                     }
                     else
                     {
@@ -107,11 +111,31 @@ namespace TPF_Laboratorio_de_Programacion
             return HayErrores;
         } 
 
+        public static Boolean validarNombre(string nombre, int id)
+        {
+            Boolean flag = false;
+
+            flag = nombreExistente(nombre);
+
+            if (id != -1)
+            {
+                DataRowCollection DRC = Producto.getProductByName(nombre).Tables[0].Rows;
+
+                if (DRC.Count > 0)
+                {
+                    if (Int32.Parse(DRC[0]["id_producto"].ToString()) == id)
+                        flag = false;
+                }
+            }
+
+            return flag;
+        }
+
         public static Boolean nombreExistente (string nombre)
         {
             Boolean existe = false;
 
-            DataTable productos = Producto.getAllProducts().Tables[0];
+            DataTable productos = Producto.getAllProducts();
 
             foreach (DataRow fila in productos.Rows)
             {

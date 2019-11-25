@@ -27,6 +27,8 @@ namespace TPF_Laboratorio_de_Programacion
         {
             formMain fmMain = Application.OpenForms.OfType<formMain>().FirstOrDefault();
 
+            errProv.Clear(); // Se limpian todos los errores
+
             if (!Producto.validarFormulario(this, errProv))
             {
                 //Funcionalidad de carga de producto
@@ -42,7 +44,7 @@ namespace TPF_Laboratorio_de_Programacion
 
                 // Actualizo el formulario y la BD
                 nuevo.actualizarDB();
-                fmMain.actualizarDVGStock();
+                fmMain.actualizarDVGStock(Producto.getAllProducts());
 
                 this.Close();
             }

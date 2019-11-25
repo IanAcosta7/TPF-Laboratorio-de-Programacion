@@ -42,24 +42,23 @@ namespace TPF_Laboratorio_de_Programacion
 
         private void formStock_Load(object sender, EventArgs e)
         {
-            this.actualizarDVGStock();
+            this.actualizarDVGStock(Producto.getAllProducts());
         }
 
-        public void actualizarDVGStock ()
+        public void actualizarDVGStock (DataTable productos)
         {
             // Se cargan los datos en el DGV
-            DataTable productos = Producto.getAllProducts().Tables[0];
             dgvStock.AutoGenerateColumns = false;
             dgvStock.DataSource = productos;
 
             // Se insertan los datos en cada columna
-            colNombre.DataPropertyName = productos.Columns[1].ColumnName;
-            colMarca.DataPropertyName = productos.Columns[2].ColumnName;
-            colStock.DataPropertyName = productos.Columns[5].ColumnName;
-            colPrecio.DataPropertyName = productos.Columns[6].ColumnName;
-            colTalle.DataPropertyName = productos.Columns[4].ColumnName;
-            colColor.DataPropertyName = productos.Columns[3].ColumnName;
-            colCodigo.DataPropertyName = productos.Columns[0].ColumnName;
+            colNombre.DataPropertyName = "nombre";
+            colMarca.DataPropertyName = "marca";
+            colStock.DataPropertyName = "stock";
+            colPrecio.DataPropertyName = "precio";
+            colTalle.DataPropertyName = "talle";
+            colColor.DataPropertyName = "color";
+            colCodigo.DataPropertyName = "id_producto";
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -70,7 +69,7 @@ namespace TPF_Laboratorio_de_Programacion
 
                 // Borro el proucto
                 Producto.borrarProducto(data[0].Value.ToString());
-                this.actualizarDVGStock();
+                this.actualizarDVGStock(Producto.getAllProducts());
             } else
             {
                 MessageBox.Show("No se ha seleccionado ningún producto.");

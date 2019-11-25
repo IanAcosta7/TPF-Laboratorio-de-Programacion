@@ -11,7 +11,6 @@ namespace TPF_Laboratorio_de_Programacion
 {
     class Utilidades
     {
-
         public static DataSet Ejecutar (string cmd)
         {
             SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=TPF2019;Integrated Security=True");
