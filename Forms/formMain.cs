@@ -78,8 +78,8 @@ namespace TPF_Laboratorio_de_Programacion
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            FormProductos nuevo = new FormProductos();
-            nuevo.Show();
+            //formProductos nuevo = new formProductos();
+            //nuevo.Show();
         }
 
         
