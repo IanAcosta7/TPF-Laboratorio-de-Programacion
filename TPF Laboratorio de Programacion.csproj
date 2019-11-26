@@ -53,6 +53,13 @@
     <Compile Include="Classes\ErrorTextBox.Designer.cs">
       <DependentUpon>ErrorTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="D:\formProductos.cs">
+      <Link>Forms\Ventas Forms\formProductos.cs</Link>
+    </Compile>
+    <Compile Include="D:\formProductos.Designer.cs">
+      <DependentUpon>formProductos.cs</DependentUpon>
+      <Link>Forms\Ventas Forms\formProductos.Designer.cs</Link>
+    </Compile>
     <Compile Include="Forms\Stock Forms\formModificar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +91,10 @@
     <EmbeddedResource Include="Forms\Stock Forms\formAgregar.resx">
       <DependentUpon>formAgregar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="D:\formProductos.resx">
+      <DependentUpon>formProductos.cs</DependentUpon>
+      <Link>Forms\Ventas Forms\formProductos.resx</Link>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -106,5 +117,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
