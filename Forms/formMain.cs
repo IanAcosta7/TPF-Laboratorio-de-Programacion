@@ -82,7 +82,75 @@ namespace TPF_Laboratorio_de_Programacion
             //nuevo.Show();
         }
 
-        
-}
+        private void btnAgregar_MouseEnter(object sender, EventArgs e)
+        {
+            btnAgregar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button2;
+        }
+
+        private void btnAgregar_MouseLeave(object sender, EventArgs e)
+        {
+            btnAgregar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+        }
+
+        private void btnAgregar_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnAgregar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
+
+        }
+
+        private void btnModificar_MouseEnter(object sender, EventArgs e)
+        {
+            btnModificar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button2;
+
+        }
+
+        private void btnModificar_MouseLeave(object sender, EventArgs e)
+        {
+            btnModificar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+
+        }
+
+        private void btnModificar_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnModificar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
+
+        }
+
+        private void btnBorrar_MouseEnter(object sender, EventArgs e)
+        {
+            btnBorrar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button2;
+
+        }
+
+        private void btnBorrar_MouseLeave(object sender, EventArgs e)
+        {
+            btnBorrar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+
+        }
+
+        private void btnBorrar_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnBorrar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
+
+        }
+
+        private void btnAñadir_MouseEnter(object sender, EventArgs e)
+        {
+            btnAñadir.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button2;
+
+        }
+
+        private void btnAñadir_MouseLeave(object sender, EventArgs e)
+        {
+            btnAñadir.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+
+        }
+
+        private void btnAñadir_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnAñadir.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
+
+        }
+    }
 
 }
