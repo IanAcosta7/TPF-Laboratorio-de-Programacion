@@ -43,9 +43,18 @@
             this.tabStock = new System.Windows.Forms.TabPage();
             this.tabVentas = new System.Windows.Forms.TabPage();
             this.tabCaja = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             this.tabPage.SuspendLayout();
             this.tabStock.SuspendLayout();
+            this.tabCaja.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAgregar
@@ -205,6 +214,8 @@
             // 
             // tabCaja
             // 
+            this.tabCaja.Controls.Add(this.lblTotal);
+            this.tabCaja.Controls.Add(this.dataGridView1);
             this.tabCaja.Location = new System.Drawing.Point(4, 25);
             this.tabCaja.Margin = new System.Windows.Forms.Padding(4);
             this.tabCaja.Name = "tabCaja";
@@ -213,6 +224,82 @@
             this.tabCaja.TabIndex = 1;
             this.tabCaja.Text = "Caja";
             this.tabCaja.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.txtDescripcion,
+            this.txtCantidad,
+            this.dataGridViewTextBoxColumn4,
+            this.txtFecha});
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView1.Location = new System.Drawing.Point(8, 6);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(813, 449);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Codigo";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.HeaderText = "Descripción";
+            this.txtDescripcion.MinimumWidth = 6;
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.ReadOnly = true;
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.HeaderText = "Cantidad";
+            this.txtCantidad.MinimumWidth = 6;
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.HeaderText = "Fecha";
+            this.txtFecha.MinimumWidth = 6;
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.ReadOnly = true;
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(8, 457);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(44, 17);
+            this.lblTotal.TabIndex = 6;
+            this.lblTotal.Text = "Total:";
             // 
             // formMain
             // 
@@ -229,6 +316,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();
             this.tabPage.ResumeLayout(false);
             this.tabStock.ResumeLayout(false);
+            this.tabCaja.ResumeLayout(false);
+            this.tabCaja.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,6 +340,13 @@
         private System.Windows.Forms.TabPage tabStock;
         private System.Windows.Forms.TabPage tabCaja;
         private System.Windows.Forms.TabPage tabVentas;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn txtFecha;
     }
 }
 
