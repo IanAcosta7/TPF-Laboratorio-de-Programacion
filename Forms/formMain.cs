@@ -152,7 +152,5 @@ namespace TPF_Laboratorio_de_Programacion
             btnAñadir.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
 
         }
-
-        
     }
 }

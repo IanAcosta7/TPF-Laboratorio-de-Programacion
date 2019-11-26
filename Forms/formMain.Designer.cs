@@ -80,7 +80,7 @@
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
-          
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             this.btnAgregar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAgregar_MouseDown);
             this.btnAgregar.MouseEnter += new System.EventHandler(this.btnAgregar_MouseEnter);
             this.btnAgregar.MouseLeave += new System.EventHandler(this.btnAgregar_MouseLeave);
@@ -221,7 +221,7 @@
             this.tabPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPage.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage.Location = new System.Drawing.Point(0, 0);
-            this.tabPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage.Name = "tabPage";
             this.tabPage.SelectedIndex = 0;
             this.tabPage.Size = new System.Drawing.Size(851, 518);
@@ -236,9 +236,9 @@
             this.tabStock.Controls.Add(this.btnBorrar);
             this.tabStock.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabStock.Location = new System.Drawing.Point(4, 26);
-            this.tabStock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabStock.Margin = new System.Windows.Forms.Padding(4);
             this.tabStock.Name = "tabStock";
-            this.tabStock.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabStock.Padding = new System.Windows.Forms.Padding(4);
             this.tabStock.Size = new System.Drawing.Size(843, 488);
             this.tabStock.TabIndex = 0;
             this.tabStock.Text = "Stock";
@@ -250,7 +250,7 @@
             this.tabVentas.Controls.Add(this.dvgCarrito);
             this.tabVentas.Controls.Add(this.btnAñadir);
             this.tabVentas.Location = new System.Drawing.Point(4, 26);
-            this.tabVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabVentas.Margin = new System.Windows.Forms.Padding(4);
             this.tabVentas.Name = "tabVentas";
             this.tabVentas.Size = new System.Drawing.Size(843, 488);
             this.tabVentas.TabIndex = 2;
@@ -359,9 +359,9 @@
             this.tabCaja.Controls.Add(this.lblTotal);
             this.tabCaja.Controls.Add(this.dataGridView1);
             this.tabCaja.Location = new System.Drawing.Point(4, 26);
-            this.tabCaja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCaja.Margin = new System.Windows.Forms.Padding(4);
             this.tabCaja.Name = "tabCaja";
-            this.tabCaja.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCaja.Padding = new System.Windows.Forms.Padding(4);
             this.tabCaja.Size = new System.Drawing.Size(843, 488);
             this.tabCaja.TabIndex = 1;
             this.tabCaja.Text = "Caja";
@@ -373,7 +373,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Location = new System.Drawing.Point(8, 466);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(49, 17);
+            this.lblTotal.Size = new System.Drawing.Size(47, 17);
             this.lblTotal.TabIndex = 6;
             this.lblTotal.Text = "Total:";
             // 
