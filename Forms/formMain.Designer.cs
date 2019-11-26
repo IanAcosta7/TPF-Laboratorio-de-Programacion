@@ -43,9 +43,10 @@
             this.tabPage = new System.Windows.Forms.TabControl();
             this.tabStock = new System.Windows.Forms.TabPage();
             this.tabVentas = new System.Windows.Forms.TabPage();
+            this.btnFinalizarVenta = new System.Windows.Forms.Button();
+            this.btnVaciarCarrito = new System.Windows.Forms.Button();
             this.dvgCarrito = new System.Windows.Forms.DataGridView();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnVaciar = new System.Windows.Forms.Button();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.tabCaja = new System.Windows.Forms.TabPage();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -66,6 +67,7 @@
             // 
             this.btnAgregar.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
             this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -78,6 +80,7 @@
             this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+           // this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             this.btnAgregar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAgregar_MouseDown);
             this.btnAgregar.MouseEnter += new System.EventHandler(this.btnAgregar_MouseEnter);
             this.btnAgregar.MouseLeave += new System.EventHandler(this.btnAgregar_MouseLeave);
@@ -86,6 +89,7 @@
             // 
             this.btnBorrar.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
             this.btnBorrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrar.FlatAppearance.BorderSize = 0;
             this.btnBorrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnBorrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -107,6 +111,7 @@
             // 
             this.btnModificar.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
             this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnModificar.FlatAppearance.BorderSize = 0;
             this.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -135,7 +140,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvStock.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvStock.BackgroundColor = System.Drawing.Color.Gray;
             this.dgvStock.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -148,7 +152,7 @@
             this.colCodigo});
             this.dgvStock.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvStock.Location = new System.Drawing.Point(6, 45);
-            this.dgvStock.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvStock.MultiSelect = false;
             this.dgvStock.Name = "dgvStock";
             this.dgvStock.ReadOnly = true;
@@ -157,7 +161,7 @@
             this.dgvStock.RowTemplate.Height = 24;
             this.dgvStock.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStock.Size = new System.Drawing.Size(610, 339);
+            this.dgvStock.Size = new System.Drawing.Size(620, 339);
             this.dgvStock.TabIndex = 4;
             // 
             // colNombre
@@ -232,15 +236,16 @@
             this.tabStock.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabStock.Location = new System.Drawing.Point(4, 22);
             this.tabStock.Name = "tabStock";
-            this.tabStock.Padding = new System.Windows.Forms.Padding(3);
+            this.tabStock.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabStock.Size = new System.Drawing.Size(630, 395);
             this.tabStock.TabIndex = 0;
             this.tabStock.Text = "Stock";
             // 
             // tabVentas
             // 
+            this.tabVentas.Controls.Add(this.btnFinalizarVenta);
+            this.tabVentas.Controls.Add(this.btnVaciarCarrito);
             this.tabVentas.Controls.Add(this.dvgCarrito);
-            this.tabVentas.Controls.Add(this.btnVaciar);
             this.tabVentas.Controls.Add(this.btnAñadir);
             this.tabVentas.Location = new System.Drawing.Point(4, 22);
             this.tabVentas.Name = "tabVentas";
@@ -248,6 +253,44 @@
             this.tabVentas.TabIndex = 2;
             this.tabVentas.Text = "Ventas";
             this.tabVentas.UseVisualStyleBackColor = true;
+            // 
+            // btnFinalizarVenta
+            // 
+            this.btnFinalizarVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFinalizarVenta.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+            this.btnFinalizarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFinalizarVenta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFinalizarVenta.FlatAppearance.BorderSize = 0;
+            this.btnFinalizarVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFinalizarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnFinalizarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinalizarVenta.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizarVenta.Location = new System.Drawing.Point(512, 364);
+            this.btnFinalizarVenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFinalizarVenta.Name = "btnFinalizarVenta";
+            this.btnFinalizarVenta.Size = new System.Drawing.Size(115, 32);
+            this.btnFinalizarVenta.TabIndex = 15;
+            this.btnFinalizarVenta.Text = "Finalizar Venta";
+            this.btnFinalizarVenta.UseVisualStyleBackColor = true;
+            // 
+            // btnVaciarCarrito
+            // 
+            this.btnVaciarCarrito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVaciarCarrito.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+            this.btnVaciarCarrito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVaciarCarrito.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVaciarCarrito.FlatAppearance.BorderSize = 0;
+            this.btnVaciarCarrito.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVaciarCarrito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnVaciarCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVaciarCarrito.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVaciarCarrito.Location = new System.Drawing.Point(379, 364);
+            this.btnVaciarCarrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVaciarCarrito.Name = "btnVaciarCarrito";
+            this.btnVaciarCarrito.Size = new System.Drawing.Size(115, 32);
+            this.btnVaciarCarrito.TabIndex = 14;
+            this.btnVaciarCarrito.Text = "Vaciar Carrito";
+            this.btnVaciarCarrito.UseVisualStyleBackColor = true;
             // 
             // dvgCarrito
             // 
@@ -260,12 +303,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dvgCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dvgCarrito.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dvgCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgCarrito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Descripcion});
+            this.dvgCarrito.Cursor = System.Windows.Forms.Cursors.Default;
             this.dvgCarrito.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dvgCarrito.Location = new System.Drawing.Point(6, 37);
-            this.dvgCarrito.Margin = new System.Windows.Forms.Padding(2);
+            this.dvgCarrito.Location = new System.Drawing.Point(6, 46);
+            this.dvgCarrito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dvgCarrito.MultiSelect = false;
             this.dvgCarrito.Name = "dvgCarrito";
             this.dvgCarrito.ReadOnly = true;
@@ -274,7 +319,7 @@
             this.dvgCarrito.RowTemplate.Height = 24;
             this.dvgCarrito.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dvgCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgCarrito.Size = new System.Drawing.Size(610, 320);
+            this.dvgCarrito.Size = new System.Drawing.Size(620, 314);
             this.dvgCarrito.TabIndex = 11;
             // 
             // Descripcion
@@ -284,27 +329,18 @@
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
             // 
-            // btnVaciar
-            // 
-            this.btnVaciar.Location = new System.Drawing.Point(501, 364);
-            this.btnVaciar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVaciar.Name = "btnVaciar";
-            this.btnVaciar.Size = new System.Drawing.Size(106, 19);
-            this.btnVaciar.TabIndex = 10;
-            this.btnVaciar.Text = "Vaciar Carrito";
-            this.btnVaciar.UseVisualStyleBackColor = true;
-            // 
             // btnAñadir
             // 
             this.btnAñadir.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
             this.btnAñadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAñadir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAñadir.FlatAppearance.BorderSize = 0;
             this.btnAñadir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAñadir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAñadir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadir.Location = new System.Drawing.Point(7, 9);
-            this.btnAñadir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAñadir.Location = new System.Drawing.Point(6, 11);
+            this.btnAñadir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(68, 24);
             this.btnAñadir.TabIndex = 9;
@@ -321,7 +357,7 @@
             this.tabCaja.Controls.Add(this.dataGridView1);
             this.tabCaja.Location = new System.Drawing.Point(4, 22);
             this.tabCaja.Name = "tabCaja";
-            this.tabCaja.Padding = new System.Windows.Forms.Padding(3);
+            this.tabCaja.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabCaja.Size = new System.Drawing.Size(630, 395);
             this.tabCaja.TabIndex = 1;
             this.tabCaja.Text = "Caja";
@@ -329,8 +365,9 @@
             // 
             // lblTotal
             // 
+            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(6, 371);
+            this.lblTotal.Location = new System.Drawing.Point(6, 379);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(39, 13);
@@ -348,6 +385,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.txtDescripcion,
@@ -355,7 +393,7 @@
             this.txtFecha});
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(6, 5);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -364,7 +402,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(610, 365);
+            this.dataGridView1.Size = new System.Drawing.Size(620, 365);
             this.dataGridView1.TabIndex = 5;
             // 
             // txtDescripcion
@@ -397,8 +435,8 @@
             this.ClientSize = new System.Drawing.Size(638, 421);
             this.Controls.Add(this.tabPage);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MinimumSize = new System.Drawing.Size(642, 428);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(642, 427);
             this.Name = "formMain";
             this.Text = "Nombre del programa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -440,9 +478,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn txtFecha;
         private System.Windows.Forms.Button btnAñadir;
-        private System.Windows.Forms.Button btnVaciar;
         private System.Windows.Forms.DataGridView dvgCarrito;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.Button btnFinalizarVenta;
+        private System.Windows.Forms.Button btnVaciarCarrito;
     }
 }
 
