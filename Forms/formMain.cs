@@ -45,7 +45,7 @@ namespace TPF_Laboratorio_de_Programacion
             this.actualizarDVGStock(Producto.getAllProducts());
         }
 
-        public void actualizarDVGStock (DataTable productos)
+        public void actualizarDVGStock(DataTable productos)
         {
             // Se cargan los datos en el DGV
             dgvStock.AutoGenerateColumns = false;
@@ -70,7 +70,8 @@ namespace TPF_Laboratorio_de_Programacion
                 // Borro el proucto
                 Producto.borrarProducto(data[0].Value.ToString());
                 this.actualizarDVGStock(Producto.getAllProducts());
-            } else
+            }
+            else
             {
                 MessageBox.Show("No se ha seleccionado ningún producto.");
             }
@@ -151,6 +152,6 @@ namespace TPF_Laboratorio_de_Programacion
             btnAñadir.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
 
         }
-    }
 
+    }
 }
