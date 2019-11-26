@@ -123,7 +123,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(23, 182);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 24);
             this.btnCancelar.TabIndex = 7;
@@ -143,7 +143,7 @@
             this.btnCargar.FlatAppearance.BorderSize = 0;
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargar.Location = new System.Drawing.Point(209, 182);
-            this.btnCargar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(89, 24);
             this.btnCargar.TabIndex = 6;
@@ -165,7 +165,7 @@
             this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMarca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMarca.Location = new System.Drawing.Point(96, 46);
-            this.txtMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(2);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(203, 21);
             this.txtMarca.TabIndex = 1;
@@ -178,7 +178,7 @@
             this.txtStock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStock.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStock.Location = new System.Drawing.Point(96, 114);
-            this.txtStock.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStock.Margin = new System.Windows.Forms.Padding(2);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(203, 21);
             this.txtStock.TabIndex = 4;
@@ -191,7 +191,7 @@
             this.txtColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtColor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtColor.Location = new System.Drawing.Point(96, 68);
-            this.txtColor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtColor.Margin = new System.Windows.Forms.Padding(2);
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(203, 21);
             this.txtColor.TabIndex = 2;
@@ -204,7 +204,7 @@
             this.txtTalle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTalle.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTalle.Location = new System.Drawing.Point(96, 91);
-            this.txtTalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTalle.Margin = new System.Windows.Forms.Padding(2);
             this.txtTalle.Name = "txtTalle";
             this.txtTalle.Size = new System.Drawing.Size(203, 21);
             this.txtTalle.TabIndex = 3;
@@ -217,7 +217,7 @@
             this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrecio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrecio.Location = new System.Drawing.Point(96, 136);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(203, 21);
             this.txtPrecio.TabIndex = 5;
@@ -230,7 +230,7 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Location = new System.Drawing.Point(96, 23);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(203, 21);
             this.txtNombre.TabIndex = 0;
@@ -275,7 +275,7 @@
             this.Controls.Add(this.lblMarca);
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(339, 271);
             this.MinimizeBox = false;

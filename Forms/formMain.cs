@@ -152,5 +152,41 @@ namespace TPF_Laboratorio_de_Programacion
             btnAñadir.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
 
         }
+
+        private void btnVaciarCarrito_MouseEnter(object sender, EventArgs e)
+        {
+            btnVaciarCarrito.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button2;
+
+        }
+
+        private void btnVaciarCarrito_MouseLeave(object sender, EventArgs e)
+        {
+            btnVaciarCarrito.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+
+        }
+
+        private void btnVaciarCarrito_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnVaciarCarrito.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
+
+        }
+
+        private void btnFinalizarVenta_MouseEnter(object sender, EventArgs e)
+        {
+            btnFinalizarVenta.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button2;
+
+        }
+
+        private void btnFinalizarVenta_MouseLeave(object sender, EventArgs e)
+        {
+            btnFinalizarVenta.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+
+        }
+
+        private void btnFinalizarVenta_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnFinalizarVenta.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
+
+        }
     }
 }
