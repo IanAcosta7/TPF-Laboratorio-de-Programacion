@@ -145,5 +145,42 @@ namespace TPF_Laboratorio_de_Programacion
 
             return existe;
         }
+        /////////////////////// FUNCION DE PRUEBA, VALIDA QUE EL USUARIO INGRESE UNA CANTIDAD SUPERIOR A CERO, ABIERTA A SOLUCIONES
+        public static Boolean validarCantidad(Control ObjetoP, ErrorProvider errorProvider, int cant)
+        {
+            Boolean HayError = false;
+
+            foreach (Control Item in ObjetoP.Controls)
+            {
+                if (Item is ErrorTextBox)
+                {
+                    ErrorTextBox Obj = (ErrorTextBox)Item;
+
+                    if (Obj.Validar == true)
+                    {
+                        if (string.IsNullOrEmpty(Obj.Text.Trim()))
+                        {
+                            errorProvider.SetError(Obj, "Falta ingresar una cantidad");
+                            HayError = true;
+                        }
+
+                        if (cant < 1)
+                        {
+                            errorProvider.SetError(Obj, "Se permiten solamanete valores mayores a cero");
+                            HayError = true;
+
+                        }
+
+                    }
+                    else
+                    {
+                        errorProvider.SetError(Obj, "");//// se puede sacar
+                    }
+                }
+            }
+            return HayError;
+        }
+
+
     }
 }
