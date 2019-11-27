@@ -35,8 +35,6 @@
             this.lblTalle = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
             this.blPrecio = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnCargar = new System.Windows.Forms.Button();
             this.errProv = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtMarca = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
             this.txtStock = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
@@ -45,6 +43,8 @@
             this.txtPrecio = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
             this.txtNombre = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.btnCargar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errProv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,47 +113,6 @@
             this.blPrecio.TabIndex = 7;
             this.blPrecio.Text = "Precio:";
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancelar.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
-            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(23, 182);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(89, 24);
-            this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            this.btnCancelar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCancelar_MouseDown);
-            this.btnCancelar.MouseEnter += new System.EventHandler(this.btnCancelar_MouseEnter);
-            this.btnCancelar.MouseLeave += new System.EventHandler(this.btnCancelar_MouseLeave);
-            // 
-            // btnCargar
-            // 
-            this.btnCargar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCargar.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
-            this.btnCargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCargar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCargar.FlatAppearance.BorderSize = 0;
-            this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCargar.Location = new System.Drawing.Point(209, 182);
-            this.btnCargar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(89, 24);
-            this.btnCargar.TabIndex = 6;
-            this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = false;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
-            this.btnCargar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCargar_MouseDown);
-            this.btnCargar.MouseEnter += new System.EventHandler(this.btnCargar_MouseEnter);
-            this.btnCargar.MouseLeave += new System.EventHandler(this.btnCargar_MouseLeave);
-            // 
             // errProv
             // 
             this.errProv.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
@@ -161,7 +120,7 @@
             // 
             // txtMarca
             // 
-            this.txtMarca.BackColor = System.Drawing.Color.DarkGray;
+            this.txtMarca.BackColor = System.Drawing.Color.White;
             this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMarca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMarca.Location = new System.Drawing.Point(96, 46);
@@ -174,7 +133,7 @@
             // 
             // txtStock
             // 
-            this.txtStock.BackColor = System.Drawing.Color.DarkGray;
+            this.txtStock.BackColor = System.Drawing.Color.White;
             this.txtStock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStock.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStock.Location = new System.Drawing.Point(96, 114);
@@ -187,7 +146,7 @@
             // 
             // txtColor
             // 
-            this.txtColor.BackColor = System.Drawing.Color.DarkGray;
+            this.txtColor.BackColor = System.Drawing.Color.White;
             this.txtColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtColor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtColor.Location = new System.Drawing.Point(96, 68);
@@ -200,7 +159,7 @@
             // 
             // txtTalle
             // 
-            this.txtTalle.BackColor = System.Drawing.Color.DarkGray;
+            this.txtTalle.BackColor = System.Drawing.Color.White;
             this.txtTalle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTalle.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTalle.Location = new System.Drawing.Point(96, 91);
@@ -213,7 +172,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.BackColor = System.Drawing.Color.DarkGray;
+            this.txtPrecio.BackColor = System.Drawing.Color.White;
             this.txtPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrecio.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrecio.Location = new System.Drawing.Point(96, 136);
@@ -226,7 +185,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.BackColor = System.Drawing.Color.DarkGray;
+            this.txtNombre.BackColor = System.Drawing.Color.White;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNombre.Location = new System.Drawing.Point(96, 23);
@@ -250,12 +209,53 @@
             this.lblNombre.TabIndex = 17;
             this.lblNombre.Text = "Nombre:";
             // 
+            // btnCargar
+            // 
+            this.btnCargar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCargar.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
+            this.btnCargar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCargar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCargar.FlatAppearance.BorderSize = 0;
+            this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargar.Location = new System.Drawing.Point(209, 182);
+            this.btnCargar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(89, 24);
+            this.btnCargar.TabIndex = 6;
+            this.btnCargar.Text = "Cargar";
+            this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            this.btnCargar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCargar_MouseDown);
+            this.btnCargar.MouseEnter += new System.EventHandler(this.btnCargar_MouseEnter);
+            this.btnCargar.MouseLeave += new System.EventHandler(this.btnCargar_MouseLeave);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
+            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(23, 182);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(89, 24);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCancelar_MouseDown);
+            this.btnCancelar.MouseEnter += new System.EventHandler(this.btnCancelar_MouseEnter);
+            this.btnCancelar.MouseLeave += new System.EventHandler(this.btnCancelar_MouseLeave);
+            // 
             // formAgregar
             // 
             this.AcceptButton = this.btnCargar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(323, 232);

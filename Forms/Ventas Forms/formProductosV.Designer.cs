@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formProductosV));
             this.dgvProductosV = new System.Windows.Forms.DataGridView();
-            this.btnBuscarNombre = new System.Windows.Forms.Button();
-            this.errorTextBox1 = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
-            this.btnAñadir = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +37,10 @@
             this.colTalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscarNombre = new System.Windows.Forms.Button();
+            this.errorTextBox1 = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
+            this.btnAñadir = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProductosV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProductosV.BackgroundColor = System.Drawing.Color.DarkGray;
             this.dgvProductosV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProductosV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductosV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -65,8 +67,8 @@
             this.colStock,
             this.colPrecio});
             this.dgvProductosV.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvProductosV.Location = new System.Drawing.Point(37, 70);
-            this.dgvProductosV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvProductosV.Location = new System.Drawing.Point(28, 57);
+            this.dgvProductosV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvProductosV.MultiSelect = false;
             this.dgvProductosV.Name = "dgvProductosV";
             this.dgvProductosV.ReadOnly = true;
@@ -75,46 +77,8 @@
             this.dgvProductosV.RowTemplate.Height = 24;
             this.dgvProductosV.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvProductosV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductosV.Size = new System.Drawing.Size(695, 273);
+            this.dgvProductosV.Size = new System.Drawing.Size(521, 222);
             this.dgvProductosV.TabIndex = 5;
-            // 
-            // btnBuscarNombre
-            // 
-            this.btnBuscarNombre.Location = new System.Drawing.Point(129, 24);
-            this.btnBuscarNombre.Name = "btnBuscarNombre";
-            this.btnBuscarNombre.Size = new System.Drawing.Size(119, 23);
-            this.btnBuscarNombre.TabIndex = 8;
-            this.btnBuscarNombre.Text = "Buscar Nombre:";
-            this.btnBuscarNombre.UseVisualStyleBackColor = true;
-            this.btnBuscarNombre.Click += new System.EventHandler(this.BtnBuscarNombre_Click);
-            // 
-            // errorTextBox1
-            // 
-            this.errorTextBox1.Location = new System.Drawing.Point(289, 25);
-            this.errorTextBox1.Name = "errorTextBox1";
-            this.errorTextBox1.Size = new System.Drawing.Size(315, 22);
-            this.errorTextBox1.TabIndex = 9;
-            this.errorTextBox1.Validar = false;
-            this.errorTextBox1.ValidarDoble = false;
-            // 
-            // btnAñadir
-            // 
-            this.btnAñadir.Location = new System.Drawing.Point(524, 375);
-            this.btnAñadir.Name = "btnAñadir";
-            this.btnAñadir.Size = new System.Drawing.Size(79, 30);
-            this.btnAñadir.TabIndex = 10;
-            this.btnAñadir.Text = "Añadir";
-            this.btnAñadir.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(183, 375);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(79, 30);
-            this.btnCancelar.TabIndex = 11;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // colCodigo
             // 
@@ -165,18 +129,90 @@
             this.colPrecio.Name = "colPrecio";
             this.colPrecio.ReadOnly = true;
             // 
+            // btnBuscarNombre
+            // 
+            this.btnBuscarNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscarNombre.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
+            this.btnBuscarNombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscarNombre.FlatAppearance.BorderSize = 0;
+            this.btnBuscarNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarNombre.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarNombre.Location = new System.Drawing.Point(97, 20);
+            this.btnBuscarNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarNombre.Name = "btnBuscarNombre";
+            this.btnBuscarNombre.Size = new System.Drawing.Size(89, 19);
+            this.btnBuscarNombre.TabIndex = 8;
+            this.btnBuscarNombre.Text = "Buscar Nombre:";
+            this.btnBuscarNombre.UseVisualStyleBackColor = true;
+            this.btnBuscarNombre.Click += new System.EventHandler(this.BtnBuscarNombre_Click);
+            this.btnBuscarNombre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBuscarNombre_MouseDown);
+            this.btnBuscarNombre.MouseEnter += new System.EventHandler(this.btnBuscarNombre_MouseEnter);
+            this.btnBuscarNombre.MouseLeave += new System.EventHandler(this.btnBuscarNombre_MouseLeave);
+            // 
+            // errorTextBox1
+            // 
+            this.errorTextBox1.BackColor = System.Drawing.Color.White;
+            this.errorTextBox1.Location = new System.Drawing.Point(217, 20);
+            this.errorTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.errorTextBox1.Name = "errorTextBox1";
+            this.errorTextBox1.Size = new System.Drawing.Size(237, 20);
+            this.errorTextBox1.TabIndex = 9;
+            this.errorTextBox1.Validar = false;
+            this.errorTextBox1.ValidarDoble = false;
+            // 
+            // btnAñadir
+            // 
+            this.btnAñadir.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
+            this.btnAñadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAñadir.FlatAppearance.BorderSize = 0;
+            this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAñadir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadir.Location = new System.Drawing.Point(393, 305);
+            this.btnAñadir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAñadir.Name = "btnAñadir";
+            this.btnAñadir.Size = new System.Drawing.Size(59, 24);
+            this.btnAñadir.TabIndex = 10;
+            this.btnAñadir.Text = "Añadir";
+            this.btnAñadir.UseVisualStyleBackColor = true;
+            this.btnAñadir.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAñadir_MouseDown);
+            this.btnAñadir.MouseEnter += new System.EventHandler(this.btnAñadir_MouseEnter);
+            this.btnAñadir.MouseLeave += new System.EventHandler(this.btnAñadir_MouseLeave);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancelar.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
+            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(137, 305);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(59, 24);
+            this.btnCancelar.TabIndex = 11;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
+            this.btnCancelar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCancelar_MouseDown);
+            this.btnCancelar.MouseEnter += new System.EventHandler(this.btnCancelar_MouseEnter);
+            this.btnCancelar.MouseLeave += new System.EventHandler(this.btnCancelar_MouseLeave);
+            // 
             // formProductosV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.errorTextBox1);
             this.Controls.Add(this.btnBuscarNombre);
             this.Controls.Add(this.dgvProductosV);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "formProductosV";
-            this.Text = "formProductosV";
+            this.Text = "Lista de Productos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

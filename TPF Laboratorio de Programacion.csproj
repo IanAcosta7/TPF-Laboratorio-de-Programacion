@@ -117,7 +117,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\button1.0.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fotito.png" />
   </ItemGroup>
@@ -135,6 +137,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nombree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button1.1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button1.2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button2.0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button2.1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button2.2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

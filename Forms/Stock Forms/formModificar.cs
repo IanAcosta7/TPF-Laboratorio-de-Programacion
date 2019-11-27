@@ -79,37 +79,37 @@ namespace TPF_Laboratorio_de_Programacion
 
         private void btnActualizar_MouseEnter(object sender, EventArgs e)
         {
-            btnActualizar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button2;
+            btnActualizar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
 
         }
 
         private void btnActualizar_MouseLeave(object sender, EventArgs e)
         {
-            btnActualizar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+            btnActualizar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
 
         }
 
         private void btnActualizar_MouseDown(object sender, MouseEventArgs e)
         {
-            btnActualizar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
+            btnActualizar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
 
         }
 
         private void btnCancelar_MouseEnter(object sender, EventArgs e)
         {
-            btnCancelar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button2;
+            btnCancelar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
 
         }
 
         private void btnCancelar_MouseLeave(object sender, EventArgs e)
         {
-            btnCancelar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+            btnCancelar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
 
         }
 
         private void btnCancelar_MouseDown(object sender, MouseEventArgs e)
         {
-            btnCancelar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
+            btnCancelar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
 
         }
     }

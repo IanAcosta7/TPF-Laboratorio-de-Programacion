@@ -82,107 +82,107 @@ namespace TPF_Laboratorio_de_Programacion
 
         private void btnAgregar_MouseEnter(object sender, EventArgs e)
         {
-            btnAgregar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button2;
+            btnAgregar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
         }
 
         private void btnAgregar_MouseLeave(object sender, EventArgs e)
         {
-            btnAgregar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+            btnAgregar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
         }
 
         private void btnAgregar_MouseDown(object sender, MouseEventArgs e)
         {
-            btnAgregar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
+            btnAgregar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
 
         }
 
         private void btnModificar_MouseEnter(object sender, EventArgs e)
         {
-            btnModificar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button2;
+            btnModificar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
 
         }
 
         private void btnModificar_MouseLeave(object sender, EventArgs e)
         {
-            btnModificar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+            btnModificar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
 
         }
 
         private void btnModificar_MouseDown(object sender, MouseEventArgs e)
         {
-            btnModificar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
+            btnModificar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
 
         }
 
         private void btnBorrar_MouseEnter(object sender, EventArgs e)
         {
-            btnBorrar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button2;
+            btnBorrar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
 
         }
 
         private void btnBorrar_MouseLeave(object sender, EventArgs e)
         {
-            btnBorrar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+            btnBorrar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
 
         }
 
         private void btnBorrar_MouseDown(object sender, MouseEventArgs e)
         {
-            btnBorrar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
+            btnBorrar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
 
         }
 
         private void btnAñadir_MouseEnter(object sender, EventArgs e)
         {
-            btnAñadirPdto.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button2;
+            btnAñadirPdto.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
 
         }
 
         private void btnAñadir_MouseLeave(object sender, EventArgs e)
         {
-            btnAñadirPdto.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+            btnAñadirPdto.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
 
         }
 
         private void btnAñadir_MouseDown(object sender, MouseEventArgs e)
         {
-            btnAñadirPdto.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
+            btnAñadirPdto.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
 
         }
 
         private void btnVaciarCarrito_MouseEnter(object sender, EventArgs e)
         {
-            btnVaciarCarrito.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button2;
+            btnVaciarCarrito.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
 
         }
 
         private void btnVaciarCarrito_MouseLeave(object sender, EventArgs e)
         {
-            btnVaciarCarrito.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+            btnVaciarCarrito.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
 
         }
 
         private void btnVaciarCarrito_MouseDown(object sender, MouseEventArgs e)
         {
-            btnVaciarCarrito.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
+            btnVaciarCarrito.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
 
         }
 
         private void btnFinalizarVenta_MouseEnter(object sender, EventArgs e)
         {
-            btnFinalizarVenta.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button2;
+            btnFinalizarVenta.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
 
         }
 
         private void btnFinalizarVenta_MouseLeave(object sender, EventArgs e)
         {
-            btnFinalizarVenta.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1;
+            btnFinalizarVenta.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
 
         }
 
         private void btnFinalizarVenta_MouseDown(object sender, MouseEventArgs e)
         {
-            btnFinalizarVenta.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button3;
+            btnFinalizarVenta.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
 
         }
 
@@ -269,11 +269,19 @@ namespace TPF_Laboratorio_de_Programacion
 
         private void BtnVaciarCarrito_Click(object sender, EventArgs e)
         {
+            //queremos que vacíe el carrito
             dgvCarrito.Rows.Clear();
             textCantidad.Text = "";
             contFila =0;
             textTotal.Text = "";
 
         }
+
+        private void btnFinalizarVenta_Click(object sender, EventArgs e)
+        {
+            //finalize stock y avisos...
+        }
+
+       
     }
 }

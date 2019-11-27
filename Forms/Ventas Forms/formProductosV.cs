@@ -60,5 +60,59 @@ namespace TPF_Laboratorio_de_Programacion.Forms.Ventas_Forms
         {
             this.Close();///no va
         }
+
+        private void btnBuscarNombre_MouseEnter(object sender, EventArgs e)
+        {
+            btnBuscarNombre.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
+
+        }
+
+        private void btnBuscarNombre_MouseLeave(object sender, EventArgs e)
+        {
+            btnBuscarNombre.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
+
+        }
+
+        private void btnBuscarNombre_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnBuscarNombre.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
+
+        }
+
+        private void btnCancelar_MouseEnter(object sender, EventArgs e)
+        {
+            btnCancelar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
+
+        }
+
+        private void btnCancelar_MouseLeave(object sender, EventArgs e)
+        {
+            btnCancelar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
+
+        }
+
+        private void btnCancelar_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnCancelar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
+
+        }
+
+        private void btnAñadir_MouseEnter(object sender, EventArgs e)
+        {
+            btnAñadir.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
+
+        }
+
+        private void btnAñadir_MouseLeave(object sender, EventArgs e)
+        {
+            btnAñadir.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
+
+        }
+
+        private void btnAñadir_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnAñadir.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
+
+        }
     }
 }
