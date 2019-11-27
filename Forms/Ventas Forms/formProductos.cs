@@ -8,24 +8,103 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TPF_Laboratorio_de_Programacion
+namespace TPF_Laboratorio_de_Programacion.Forms.Ventas_Forms
 {
-    public partial class FormProductos : Form
+    public partial class formProductos : Form
     {
-        public FormProductos()
+        public formProductos()
         {
             InitializeComponent();
         }
 
-        private void FormProductos_Load(object sender, EventArgs e)
+        //private void BtnAñadir_Click(object sender, EventArgs e)
+        //{
+        //    /////// ESTA FUNCION OBLIGA A QUE EL USUARIO A REALIZAR UNA SOLA OPERACION: CANCELAR O AÑADIR
+        //    if (dgvProductos.Rows.Count == 1) ///SI SELECCIONO ALGO
+        //    {
+        //        DialogResult = DialogResult.OK;
+        //        this.Close();
+        //    }
+        //    else
+        //    {
+        //        return;
+        //    }
+        //}
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            this.actualizarDGVStockProd(Producto.getAllProducts());
+            this.Close();
         }
-        public void actualizarDGVStockProd(DataTable productos)
+
+        private void BtnBuscarNombre_Click(object sender, EventArgs e)
+        {
+            this.Close();///no va
+        }
+
+        private void btnBuscarNombre_MouseEnter(object sender, EventArgs e)
+        {
+            btnBuscarNombre.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
+
+        }
+
+        private void btnBuscarNombre_MouseLeave(object sender, EventArgs e)
+        {
+            btnBuscarNombre.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
+
+        }
+
+        private void btnBuscarNombre_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnBuscarNombre.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
+
+        }
+
+        private void btnCancelar_MouseEnter(object sender, EventArgs e)
+        {
+            btnCancelar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
+
+        }
+
+        private void btnCancelar_MouseLeave(object sender, EventArgs e)
+        {
+            btnCancelar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
+
+        }
+
+        private void btnCancelar_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnCancelar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
+
+        }
+
+        private void btnAñadir_MouseEnter(object sender, EventArgs e)
+        {
+            btnAñadir.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
+
+        }
+
+        private void btnAñadir_MouseLeave(object sender, EventArgs e)
+        {
+            btnAñadir.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
+
+        }
+
+        private void btnAñadir_MouseDown(object sender, MouseEventArgs e)
+        {
+            btnAñadir.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
+
+        }
+
+        private void formProductos_Load(object sender, EventArgs e)
+        {
+            this.actualizarDVGProductos(Producto.getAllProducts());
+        }
+
+        public void actualizarDVGProductos(DataTable productos)
         {
             // Se cargan los datos en el DGV
-            dgvStockProd.AutoGenerateColumns = false;
-            dgvStockProd.DataSource = productos;
+            dgvProductos.AutoGenerateColumns = false;
+            dgvProductos.DataSource = productos;
 
             // Se insertan los datos en cada columna
             colNombre.DataPropertyName = "nombre";
@@ -36,22 +115,16 @@ namespace TPF_Laboratorio_de_Programacion
             colColor.DataPropertyName = "color";
             colCodigo.DataPropertyName = "id_producto";
         }
-        /*
-        public void Añador() 
-        {
-            DataGridViewCellCollection nueva = dgvStockProd.SelectedRows[0].Cells;
-        
-            if (dgvStockProd.SelectedRows.Count == 1)
-            {
-               INTENTO DE PASAR DE UNA DATAGRIDVIEW A OTRA(CARRITO)
-            }
-            else
-            {
-                MessageBox.Show("No se ha seleccionado ningún producto.");
-            }
 
-           
+        private void btnAñadir_Click(object sender, EventArgs e)
+        {
+            DataGridViewSelectedRowCollection rows = dgvProductos.SelectedRows;
+            
+            foreach (DataGridViewRow row in rows)
+            {
+                //Compra esto esta en progreso
+                row.Cells["colNombre"].Value.ToString();
+            }
         }
-        */
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TPF_Laboratorio_de_Programacion.Forms.Ventas_Forms
 {
-    partial class formProductosV
+    partial class formProductos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formProductosV));
-            this.dgvProductosV = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formProductos));
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,24 +41,24 @@
             this.errorTextBox1 = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvProductosV
+            // dgvProductos
             // 
-            this.dgvProductosV.AllowUserToAddRows = false;
-            this.dgvProductosV.AllowUserToDeleteRows = false;
-            this.dgvProductosV.AllowUserToOrderColumns = true;
-            this.dgvProductosV.AllowUserToResizeColumns = false;
-            this.dgvProductosV.AllowUserToResizeRows = false;
-            this.dgvProductosV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvProductos.AllowUserToAddRows = false;
+            this.dgvProductos.AllowUserToDeleteRows = false;
+            this.dgvProductos.AllowUserToOrderColumns = true;
+            this.dgvProductos.AllowUserToResizeColumns = false;
+            this.dgvProductos.AllowUserToResizeRows = false;
+            this.dgvProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvProductosV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvProductosV.BackgroundColor = System.Drawing.Color.DarkGray;
-            this.dgvProductosV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvProductosV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductosV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProductos.BackgroundColor = System.Drawing.Color.DarkGray;
+            this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCodigo,
             this.colMarca,
             this.colNombre,
@@ -66,19 +66,18 @@
             this.colTalle,
             this.colStock,
             this.colPrecio});
-            this.dgvProductosV.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvProductosV.Location = new System.Drawing.Point(28, 57);
-            this.dgvProductosV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dgvProductosV.MultiSelect = false;
-            this.dgvProductosV.Name = "dgvProductosV";
-            this.dgvProductosV.ReadOnly = true;
-            this.dgvProductosV.RowHeadersVisible = false;
-            this.dgvProductosV.RowHeadersWidth = 51;
-            this.dgvProductosV.RowTemplate.Height = 24;
-            this.dgvProductosV.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvProductosV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductosV.Size = new System.Drawing.Size(521, 222);
-            this.dgvProductosV.TabIndex = 5;
+            this.dgvProductos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvProductos.Location = new System.Drawing.Point(12, 51);
+            this.dgvProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.ReadOnly = true;
+            this.dgvProductos.RowHeadersVisible = false;
+            this.dgvProductos.RowHeadersWidth = 51;
+            this.dgvProductos.RowTemplate.Height = 24;
+            this.dgvProductos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProductos.Size = new System.Drawing.Size(698, 439);
+            this.dgvProductos.TabIndex = 5;
             // 
             // colCodigo
             // 
@@ -131,16 +130,15 @@
             // 
             // btnBuscarNombre
             // 
-            this.btnBuscarNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscarNombre.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
             this.btnBuscarNombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBuscarNombre.FlatAppearance.BorderSize = 0;
             this.btnBuscarNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarNombre.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarNombre.Location = new System.Drawing.Point(97, 20);
-            this.btnBuscarNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarNombre.Location = new System.Drawing.Point(12, 11);
+            this.btnBuscarNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscarNombre.Name = "btnBuscarNombre";
-            this.btnBuscarNombre.Size = new System.Drawing.Size(89, 19);
+            this.btnBuscarNombre.Size = new System.Drawing.Size(91, 30);
             this.btnBuscarNombre.TabIndex = 8;
             this.btnBuscarNombre.Text = "Buscar Nombre:";
             this.btnBuscarNombre.UseVisualStyleBackColor = true;
@@ -152,10 +150,10 @@
             // errorTextBox1
             // 
             this.errorTextBox1.BackColor = System.Drawing.Color.White;
-            this.errorTextBox1.Location = new System.Drawing.Point(217, 20);
-            this.errorTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.errorTextBox1.Location = new System.Drawing.Point(120, 16);
+            this.errorTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.errorTextBox1.Name = "errorTextBox1";
-            this.errorTextBox1.Size = new System.Drawing.Size(237, 20);
+            this.errorTextBox1.Size = new System.Drawing.Size(590, 22);
             this.errorTextBox1.TabIndex = 9;
             this.errorTextBox1.Validar = false;
             this.errorTextBox1.ValidarDoble = false;
@@ -167,13 +165,14 @@
             this.btnAñadir.FlatAppearance.BorderSize = 0;
             this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAñadir.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadir.Location = new System.Drawing.Point(393, 305);
-            this.btnAñadir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAñadir.Location = new System.Drawing.Point(619, 494);
+            this.btnAñadir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAñadir.Name = "btnAñadir";
-            this.btnAñadir.Size = new System.Drawing.Size(59, 24);
+            this.btnAñadir.Size = new System.Drawing.Size(91, 30);
             this.btnAñadir.TabIndex = 10;
             this.btnAñadir.Text = "Añadir";
             this.btnAñadir.UseVisualStyleBackColor = true;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
             this.btnAñadir.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAñadir_MouseDown);
             this.btnAñadir.MouseEnter += new System.EventHandler(this.btnAñadir_MouseEnter);
             this.btnAñadir.MouseLeave += new System.EventHandler(this.btnAñadir_MouseLeave);
@@ -183,13 +182,14 @@
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancelar.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
             this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(137, 305);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Location = new System.Drawing.Point(12, 494);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(59, 24);
+            this.btnCancelar.Size = new System.Drawing.Size(91, 30);
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -198,22 +198,29 @@
             this.btnCancelar.MouseEnter += new System.EventHandler(this.btnCancelar_MouseEnter);
             this.btnCancelar.MouseLeave += new System.EventHandler(this.btnCancelar_MouseLeave);
             // 
-            // formProductosV
+            // formProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.btnAñadir;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.CancelButton = this.btnCancelar;
+            this.ClientSize = new System.Drawing.Size(722, 535);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.errorTextBox1);
             this.Controls.Add(this.btnBuscarNombre);
-            this.Controls.Add(this.dgvProductosV);
+            this.Controls.Add(this.dgvProductos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "formProductosV";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(740, 582);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(740, 582);
+            this.Name = "formProductos";
             this.Text = "Lista de Productos";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductosV)).EndInit();
+            this.Load += new System.EventHandler(this.formProductos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,7 +231,7 @@
         private ErrorTextBox errorTextBox1;
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Button btnCancelar;
-        public System.Windows.Forms.DataGridView dgvProductosV;
+        public System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;

@@ -78,8 +78,6 @@ namespace TPF_Laboratorio_de_Programacion
             }
         }
 
-
-
         private void btnAgregar_MouseEnter(object sender, EventArgs e)
         {
             btnAgregar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
@@ -194,12 +192,15 @@ namespace TPF_Laboratorio_de_Programacion
             /////////////////////////////////////// ES UNA FUNCION DE PRUEBA, ABIERTA A OTRAS SOLUCIONES
             // formProductosV nuevo = new formProductosV();
             //nuevo.Show();
-            formProductosV nuevoV = new formProductosV();   ///llamo a la ventana productosV
-            nuevoV.ShowDialog();  ///duncion para que tenga ponga cancelar o añadir nada mas
+            formProductos nuevoV = new formProductos();   ///llamo a la ventana productosV
+            nuevoV.Show();
 
-            Int32 cantDada = Convert.ToInt32(textCantidad);
+            //nuevoV.ShowDialog();  ///duncion para que tenga ponga cancelar o añadir nada mas
+
+            //Int32 cantDada = Convert.ToInt32(textCantidad);
 
             /// puede ser una sola condicion con &
+            /*
             if (nuevoV.DialogResult == DialogResult.OK)
             {
                 if (Producto.validarCantidad(this, errorProvCant, cantDada) == false)
@@ -265,6 +266,7 @@ namespace TPF_Laboratorio_de_Programacion
                 }
 
             }
+            */
         }
 
         private void BtnVaciarCarrito_Click(object sender, EventArgs e)
@@ -281,7 +283,5 @@ namespace TPF_Laboratorio_de_Programacion
         {
             //finalize stock y avisos...
         }
-
-       
     }
 }
