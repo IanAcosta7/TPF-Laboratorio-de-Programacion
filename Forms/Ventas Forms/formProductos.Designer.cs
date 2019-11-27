@@ -41,7 +41,10 @@
             this.errorTextBox1 = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvProductos
@@ -69,6 +72,7 @@
             this.dgvProductos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvProductos.Location = new System.Drawing.Point(12, 51);
             this.dgvProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvProductos.MultiSelect = false;
             this.dgvProductos.Name = "dgvProductos";
             this.dgvProductos.ReadOnly = true;
             this.dgvProductos.RowHeadersVisible = false;
@@ -198,6 +202,32 @@
             this.btnCancelar.MouseEnter += new System.EventHandler(this.btnCancelar_MouseEnter);
             this.btnCancelar.MouseLeave += new System.EventHandler(this.btnCancelar_MouseLeave);
             // 
+            // lblCantidad
+            // 
+            this.lblCantidad.AutoSize = true;
+            this.lblCantidad.Location = new System.Drawing.Point(477, 502);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(64, 17);
+            this.lblCantidad.TabIndex = 13;
+            this.lblCantidad.Text = "Cantidad";
+            // 
+            // nudCantidad
+            // 
+            this.nudCantidad.Location = new System.Drawing.Point(547, 500);
+            this.nudCantidad.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudCantidad.Name = "nudCantidad";
+            this.nudCantidad.Size = new System.Drawing.Size(66, 22);
+            this.nudCantidad.TabIndex = 14;
+            this.nudCantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // formProductos
             // 
             this.AcceptButton = this.btnAñadir;
@@ -206,6 +236,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(722, 535);
+            this.Controls.Add(this.nudCantidad);
+            this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.errorTextBox1);
@@ -221,6 +253,7 @@
             this.Text = "Lista de Productos";
             this.Load += new System.EventHandler(this.formProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,5 +272,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
+        private System.Windows.Forms.Label lblCantidad;
+        private System.Windows.Forms.NumericUpDown nudCantidad;
     }
 }

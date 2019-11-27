@@ -44,6 +44,7 @@ namespace TPF_Laboratorio_de_Programacion
         private void formStock_Load(object sender, EventArgs e)
         {
             this.actualizarDVGStock(Producto.getAllProducts());
+            this.actualizarDVGVentas(Compra.getAllCompras());
         }
 
         public void actualizarDVGStock(DataTable productos)
@@ -51,7 +52,7 @@ namespace TPF_Laboratorio_de_Programacion
             // Se cargan los datos en el DGV
             dgvStock.AutoGenerateColumns = false;
             dgvStock.DataSource = productos;
-
+            
             // Se insertan los datos en cada columna
             colNombre.DataPropertyName = "nombre";
             colMarca.DataPropertyName = "marca";
@@ -60,6 +61,19 @@ namespace TPF_Laboratorio_de_Programacion
             colTalle.DataPropertyName = "talle";
             colColor.DataPropertyName = "color";
             colCodigo.DataPropertyName = "id_producto";
+        }
+
+        public void actualizarDVGVentas(DataTable compras)
+        {
+            // Se cargan los datos en el DGV
+            dgvCarrito.AutoGenerateColumns = false;
+            dgvCarrito.DataSource = compras;
+
+            // Se insertan los datos en cada columna
+            colDescripcion.DataPropertyName = "descripcion";
+            ColCantidad.DataPropertyName = "cantidad";
+            colPrice.DataPropertyName = "precio";
+            colImporte.DataPropertyName = "importe";
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -271,12 +285,8 @@ namespace TPF_Laboratorio_de_Programacion
 
         private void BtnVaciarCarrito_Click(object sender, EventArgs e)
         {
-            //queremos que vacíe el carrito
-            dgvCarrito.Rows.Clear();
-            textCantidad.Text = "";
-            contFila =0;
-            textTotal.Text = "";
-
+            Compra.vaciarCompras();
+            actualizarDVGVentas(Compra.getAllCompras());
         }
 
         private void btnFinalizarVenta_Click(object sender, EventArgs e)

@@ -51,6 +51,10 @@
             this.btnFinalizarVenta = new System.Windows.Forms.Button();
             this.btnVaciarCarrito = new System.Windows.Forms.Button();
             this.dgvCarrito = new System.Windows.Forms.DataGridView();
+            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAñadirPdto = new System.Windows.Forms.Button();
             this.tabCaja = new System.Windows.Forms.TabPage();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -59,10 +63,6 @@
             this.txtCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvCant = new System.Windows.Forms.ErrorProvider(this.components);
-            this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             this.tabPage.SuspendLayout();
             this.tabStock.SuspendLayout();
@@ -393,6 +393,37 @@
             this.dgvCarrito.Size = new System.Drawing.Size(827, 386);
             this.dgvCarrito.TabIndex = 11;
             // 
+            // colDescripcion
+            // 
+            this.colDescripcion.HeaderText = "Descripción";
+            this.colDescripcion.MinimumWidth = 6;
+            this.colDescripcion.Name = "colDescripcion";
+            this.colDescripcion.ReadOnly = true;
+            // 
+            // ColCantidad
+            // 
+            this.ColCantidad.FillWeight = 20F;
+            this.ColCantidad.HeaderText = "Cantidad";
+            this.ColCantidad.MinimumWidth = 6;
+            this.ColCantidad.Name = "ColCantidad";
+            this.ColCantidad.ReadOnly = true;
+            // 
+            // colPrice
+            // 
+            this.colPrice.FillWeight = 20F;
+            this.colPrice.HeaderText = "Precio";
+            this.colPrice.MinimumWidth = 6;
+            this.colPrice.Name = "colPrice";
+            this.colPrice.ReadOnly = true;
+            // 
+            // colImporte
+            // 
+            this.colImporte.FillWeight = 20F;
+            this.colImporte.HeaderText = "Importe";
+            this.colImporte.MinimumWidth = 6;
+            this.colImporte.Name = "colImporte";
+            this.colImporte.ReadOnly = true;
+            // 
             // btnAñadirPdto
             // 
             this.btnAñadirPdto.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
@@ -494,37 +525,6 @@
             // errorProvCant
             // 
             this.errorProvCant.ContainerControl = this;
-            // 
-            // colDescripcion
-            // 
-            this.colDescripcion.HeaderText = "Descripción";
-            this.colDescripcion.MinimumWidth = 6;
-            this.colDescripcion.Name = "colDescripcion";
-            this.colDescripcion.ReadOnly = true;
-            // 
-            // ColCantidad
-            // 
-            this.ColCantidad.FillWeight = 20F;
-            this.ColCantidad.HeaderText = "Cantidad";
-            this.ColCantidad.MinimumWidth = 6;
-            this.ColCantidad.Name = "ColCantidad";
-            this.ColCantidad.ReadOnly = true;
-            // 
-            // colPrice
-            // 
-            this.colPrice.FillWeight = 20F;
-            this.colPrice.HeaderText = "Precio";
-            this.colPrice.MinimumWidth = 6;
-            this.colPrice.Name = "colPrice";
-            this.colPrice.ReadOnly = true;
-            // 
-            // colImporte
-            // 
-            this.colImporte.FillWeight = 20F;
-            this.colImporte.HeaderText = "Importe";
-            this.colImporte.MinimumWidth = 6;
-            this.colImporte.Name = "colImporte";
-            this.colImporte.ReadOnly = true;
             // 
             // formMain
             // 

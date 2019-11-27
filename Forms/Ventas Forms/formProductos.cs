@@ -118,12 +118,27 @@ namespace TPF_Laboratorio_de_Programacion.Forms.Ventas_Forms
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
-            DataGridViewSelectedRowCollection rows = dgvProductos.SelectedRows;
             
-            foreach (DataGridViewRow row in rows)
+            if (dgvProductos.SelectedRows.Count > 0 && nudCantidad.Value > 0)
             {
-                //Compra esto esta en progreso
-                row.Cells["colNombre"].Value.ToString();
+                formMain fmMain = Application.OpenForms.OfType<formMain>().FirstOrDefault();
+
+                DataGridViewRow row = dgvProductos.SelectedRows[0];
+                string desc = string.Format("{0} {1} {2} Talle:{3} #{4}", row.Cells["colNombre"].Value.ToString(), row.Cells["colMarca"].Value.ToString(), row.Cells["colColor"].Value.ToString(), row.Cells["colTalle"].Value.ToString(), row.Cells["colCodigo"].Value.ToString());
+                int cantidad = Int32.Parse(nudCantidad.Value.ToString());
+                float precio = float.Parse(row.Cells["colPrecio"].Value.ToString());
+
+                // Creo la compra y la añado al carrito
+                Compra nueva = new Compra(desc, cantidad, precio, cantidad*precio);
+                nueva.AddCompra();
+
+                // Actualizo el carrito
+                fmMain.actualizarDVGVentas(Compra.getAllCompras());
+
+                this.Close();
+            } else
+            {
+                MessageBox.Show("No se ha seleccionado ningún producto");
             }
         }
     }
