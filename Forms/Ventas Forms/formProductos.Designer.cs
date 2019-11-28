@@ -38,11 +38,11 @@
             this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBuscarNombre = new System.Windows.Forms.Button();
-            this.errorTextBox1 = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
+            this.textBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
@@ -151,17 +151,6 @@
             this.btnBuscarNombre.MouseEnter += new System.EventHandler(this.btnBuscarNombre_MouseEnter);
             this.btnBuscarNombre.MouseLeave += new System.EventHandler(this.btnBuscarNombre_MouseLeave);
             // 
-            // errorTextBox1
-            // 
-            this.errorTextBox1.BackColor = System.Drawing.Color.White;
-            this.errorTextBox1.Location = new System.Drawing.Point(120, 16);
-            this.errorTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.errorTextBox1.Name = "errorTextBox1";
-            this.errorTextBox1.Size = new System.Drawing.Size(590, 22);
-            this.errorTextBox1.TabIndex = 9;
-            this.errorTextBox1.Validar = false;
-            this.errorTextBox1.ValidarDoble = false;
-            // 
             // btnAñadir
             // 
             this.btnAñadir.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
@@ -228,6 +217,15 @@
             0,
             0});
             // 
+            // textBuscar
+            // 
+            this.textBuscar.Location = new System.Drawing.Point(109, 16);
+            this.textBuscar.Name = "textBuscar";
+            this.textBuscar.Size = new System.Drawing.Size(601, 22);
+            this.textBuscar.TabIndex = 15;
+            this.textBuscar.Text = "                                                                    Buscar por ma" +
+    "rca";
+            // 
             // formProductos
             // 
             this.AcceptButton = this.btnAñadir;
@@ -235,12 +233,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(722, 535);
+            this.ClientSize = new System.Drawing.Size(722, 537);
+            this.Controls.Add(this.textBuscar);
             this.Controls.Add(this.nudCantidad);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAñadir);
-            this.Controls.Add(this.errorTextBox1);
             this.Controls.Add(this.btnBuscarNombre);
             this.Controls.Add(this.dgvProductos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -261,7 +259,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnBuscarNombre;
-        private ErrorTextBox errorTextBox1;
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Button btnCancelar;
         public System.Windows.Forms.DataGridView dgvProductos;
@@ -274,5 +271,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrecio;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.NumericUpDown nudCantidad;
+        public System.Windows.Forms.TextBox textBuscar;
     }
 }

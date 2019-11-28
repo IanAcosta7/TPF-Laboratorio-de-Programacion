@@ -38,7 +38,18 @@ namespace TPF_Laboratorio_de_Programacion.Forms.Ventas_Forms
 
         private void BtnBuscarNombre_Click(object sender, EventArgs e)
         {
-            this.Close();///no va
+            if(string.IsNullOrEmpty(textBuscar.Text.Trim()))
+            {
+                try
+                {
+                    dgvProductos.DataSource = (Producto.getProductByNameBuscar(textBuscar.Text.Trim())).Tables[0];
+                }
+                catch(Exception error)
+                {
+                    MessageBox.Show("el tincho se equivoco fuerte" + error.Message);
+
+                }
+            }
         }
 
         private void btnBuscarNombre_MouseEnter(object sender, EventArgs e)
