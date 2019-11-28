@@ -37,24 +37,6 @@ namespace TPF_Laboratorio_de_Programacion.Forms.Ventas_Forms
             this.Close();
         }
 
-        private void btnBuscarNombre_MouseEnter(object sender, EventArgs e)
-        {
-            btnBuscarNombre.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
-
-        }
-
-        private void btnBuscarNombre_MouseLeave(object sender, EventArgs e)
-        {
-            btnBuscarNombre.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
-
-        }
-
-        private void btnBuscarNombre_MouseDown(object sender, MouseEventArgs e)
-        {
-            btnBuscarNombre.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_2;
-
-        }
-
         private void btnCancelar_MouseEnter(object sender, EventArgs e)
         {
             btnCancelar.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
@@ -159,7 +141,6 @@ namespace TPF_Laboratorio_de_Programacion.Forms.Ventas_Forms
             catch (Exception error)
             {
                 MessageBox.Show("ERROR: El tincho se equivoco fuerte, y no consiguio buscar ese nombre" + error.Message);
-
             }
         }
     }

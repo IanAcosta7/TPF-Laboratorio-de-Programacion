@@ -46,8 +46,6 @@
             this.tabVentas = new System.Windows.Forms.TabPage();
             this.labelTotal = new System.Windows.Forms.Label();
             this.textTotal = new System.Windows.Forms.TextBox();
-            this.textCantidad = new TPF_Laboratorio_de_Programacion.ErrorTextBox();
-            this.lblCantidad = new System.Windows.Forms.Label();
             this.btnFinalizarVenta = new System.Windows.Forms.Button();
             this.btnVaciarCarrito = new System.Windows.Forms.Button();
             this.dgvCarrito = new System.Windows.Forms.DataGridView();
@@ -57,6 +55,8 @@
             this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAñadirPdto = new System.Windows.Forms.Button();
             this.errorProvCant = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblBuscar = new System.Windows.Forms.Label();
+            this.textBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             this.tabPage.SuspendLayout();
             this.tabStock.SuspendLayout();
@@ -232,6 +232,8 @@
             // tabStock
             // 
             this.tabStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabStock.Controls.Add(this.lblBuscar);
+            this.tabStock.Controls.Add(this.textBuscar);
             this.tabStock.Controls.Add(this.dgvStock);
             this.tabStock.Controls.Add(this.btnModificar);
             this.tabStock.Controls.Add(this.btnAgregar);
@@ -250,8 +252,6 @@
             this.tabVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tabVentas.Controls.Add(this.labelTotal);
             this.tabVentas.Controls.Add(this.textTotal);
-            this.tabVentas.Controls.Add(this.textCantidad);
-            this.tabVentas.Controls.Add(this.lblCantidad);
             this.tabVentas.Controls.Add(this.btnFinalizarVenta);
             this.tabVentas.Controls.Add(this.btnVaciarCarrito);
             this.tabVentas.Controls.Add(this.dgvCarrito);
@@ -267,9 +267,10 @@
             // 
             this.labelTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTotal.AutoSize = true;
-            this.labelTotal.Location = new System.Drawing.Point(595, 458);
+            this.labelTotal.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotal.Location = new System.Drawing.Point(670, 453);
             this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(74, 17);
+            this.labelTotal.Size = new System.Drawing.Size(81, 17);
             this.labelTotal.TabIndex = 20;
             this.labelTotal.Text = "TOTAL: $";
             // 
@@ -279,31 +280,12 @@
             this.textTotal.BackColor = System.Drawing.Color.White;
             this.textTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textTotal.Location = new System.Drawing.Point(679, 455);
+            this.textTotal.Location = new System.Drawing.Point(757, 450);
             this.textTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textTotal.Name = "textTotal";
             this.textTotal.ReadOnly = true;
             this.textTotal.Size = new System.Drawing.Size(78, 24);
             this.textTotal.TabIndex = 19;
-            // 
-            // textCantidad
-            // 
-            this.textCantidad.Location = new System.Drawing.Point(104, 14);
-            this.textCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textCantidad.Name = "textCantidad";
-            this.textCantidad.Size = new System.Drawing.Size(100, 24);
-            this.textCantidad.TabIndex = 18;
-            this.textCantidad.Validar = false;
-            this.textCantidad.ValidarDoble = false;
-            // 
-            // lblCantidad
-            // 
-            this.lblCantidad.AutoSize = true;
-            this.lblCantidad.Location = new System.Drawing.Point(21, 17);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(76, 17);
-            this.lblCantidad.TabIndex = 17;
-            this.lblCantidad.Text = "Cantidad:";
             // 
             // btnFinalizarVenta
             // 
@@ -316,7 +298,7 @@
             this.btnFinalizarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnFinalizarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizarVenta.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizarVenta.Location = new System.Drawing.Point(253, 449);
+            this.btnFinalizarVenta.Location = new System.Drawing.Point(178, 444);
             this.btnFinalizarVenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFinalizarVenta.Name = "btnFinalizarVenta";
             this.btnFinalizarVenta.Size = new System.Drawing.Size(153, 37);
@@ -339,7 +321,7 @@
             this.btnVaciarCarrito.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnVaciarCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVaciarCarrito.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVaciarCarrito.Location = new System.Drawing.Point(72, 449);
+            this.btnVaciarCarrito.Location = new System.Drawing.Point(8, 444);
             this.btnVaciarCarrito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVaciarCarrito.Name = "btnVaciarCarrito";
             this.btnVaciarCarrito.Size = new System.Drawing.Size(153, 37);
@@ -372,7 +354,7 @@
             this.colImporte});
             this.dgvCarrito.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgvCarrito.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvCarrito.Location = new System.Drawing.Point(8, 57);
+            this.dgvCarrito.Location = new System.Drawing.Point(8, 55);
             this.dgvCarrito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvCarrito.MultiSelect = false;
             this.dgvCarrito.Name = "dgvCarrito";
@@ -382,7 +364,7 @@
             this.dgvCarrito.RowTemplate.Height = 24;
             this.dgvCarrito.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCarrito.Size = new System.Drawing.Size(827, 386);
+            this.dgvCarrito.Size = new System.Drawing.Size(827, 383);
             this.dgvCarrito.TabIndex = 11;
             // 
             // colDescripcion
@@ -426,12 +408,12 @@
             this.btnAñadirPdto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAñadirPdto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAñadirPdto.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadirPdto.Location = new System.Drawing.Point(297, 14);
+            this.btnAñadirPdto.Location = new System.Drawing.Point(8, 12);
             this.btnAñadirPdto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAñadirPdto.Name = "btnAñadirPdto";
-            this.btnAñadirPdto.Size = new System.Drawing.Size(140, 26);
+            this.btnAñadirPdto.Size = new System.Drawing.Size(91, 30);
             this.btnAñadirPdto.TabIndex = 9;
-            this.btnAñadirPdto.Text = "Añadir Productos";
+            this.btnAñadirPdto.Text = "Añadir";
             this.btnAñadirPdto.UseVisualStyleBackColor = true;
             this.btnAñadirPdto.Click += new System.EventHandler(this.BtnAñadirPdto_Click);
             this.btnAñadirPdto.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAñadir_MouseDown);
@@ -441,6 +423,25 @@
             // errorProvCant
             // 
             this.errorProvCant.ContainerControl = this;
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.AutoSize = true;
+            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.Location = new System.Drawing.Point(333, 20);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(69, 20);
+            this.lblBuscar.TabIndex = 18;
+            this.lblBuscar.Text = "Buscar";
+            // 
+            // textBuscar
+            // 
+            this.textBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBuscar.Location = new System.Drawing.Point(415, 19);
+            this.textBuscar.Name = "textBuscar";
+            this.textBuscar.Size = new System.Drawing.Size(193, 24);
+            this.textBuscar.TabIndex = 17;
+            this.textBuscar.TextChanged += new System.EventHandler(this.textBuscar_TextChanged);
             // 
             // formMain
             // 
@@ -459,6 +460,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();
             this.tabPage.ResumeLayout(false);
             this.tabStock.ResumeLayout(false);
+            this.tabStock.PerformLayout();
             this.tabVentas.ResumeLayout(false);
             this.tabVentas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).EndInit();
@@ -486,8 +488,6 @@
         private System.Windows.Forms.Button btnAñadirPdto;
         private System.Windows.Forms.Button btnFinalizarVenta;
         private System.Windows.Forms.Button btnVaciarCarrito;
-        private System.Windows.Forms.Label lblCantidad;
-        private ErrorTextBox textCantidad;
         private System.Windows.Forms.ErrorProvider errorProvCant;
         public System.Windows.Forms.DataGridView dgvCarrito;
         private System.Windows.Forms.Label labelTotal;
@@ -496,6 +496,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn colImporte;
+        private System.Windows.Forms.Label lblBuscar;
+        public System.Windows.Forms.TextBox textBuscar;
     }
 }
 

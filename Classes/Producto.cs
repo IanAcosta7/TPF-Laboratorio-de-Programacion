@@ -38,7 +38,7 @@ namespace TPF_Laboratorio_de_Programacion
         public static DataTable getAllProducts()
         {
             // Conexion BD
-            string cmd = "SELECT * FROM Productos WHERE borrado=0";
+            string cmd = "SELECT * FROM Productos WHERE borrado=0"; // Esto es un error ya que se deberia traer todo
             DataSet ds = Utilidades.Ejecutar(cmd);
 
             return ds.Tables[0];

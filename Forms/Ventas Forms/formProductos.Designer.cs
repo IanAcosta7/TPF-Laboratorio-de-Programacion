@@ -37,12 +37,12 @@
             this.colTalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscarNombre = new System.Windows.Forms.Button();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.textBuscar = new System.Windows.Forms.TextBox();
+            this.lblBuscar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.SuspendLayout();
@@ -133,24 +133,6 @@
             this.colPrecio.Name = "colPrecio";
             this.colPrecio.ReadOnly = true;
             // 
-            // btnBuscarNombre
-            // 
-            this.btnBuscarNombre.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
-            this.btnBuscarNombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscarNombre.FlatAppearance.BorderSize = 0;
-            this.btnBuscarNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarNombre.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarNombre.Location = new System.Drawing.Point(12, 11);
-            this.btnBuscarNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBuscarNombre.Name = "btnBuscarNombre";
-            this.btnBuscarNombre.Size = new System.Drawing.Size(91, 30);
-            this.btnBuscarNombre.TabIndex = 8;
-            this.btnBuscarNombre.Text = "Buscar Nombre:";
-            this.btnBuscarNombre.UseVisualStyleBackColor = true;
-            this.btnBuscarNombre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBuscarNombre_MouseDown);
-            this.btnBuscarNombre.MouseEnter += new System.EventHandler(this.btnBuscarNombre_MouseEnter);
-            this.btnBuscarNombre.MouseLeave += new System.EventHandler(this.btnBuscarNombre_MouseLeave);
-            // 
             // btnAñadir
             // 
             this.btnAñadir.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.button1_0;
@@ -219,11 +201,22 @@
             // 
             // textBuscar
             // 
-            this.textBuscar.Location = new System.Drawing.Point(109, 16);
+            this.textBuscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBuscar.Location = new System.Drawing.Point(110, 16);
             this.textBuscar.Name = "textBuscar";
-            this.textBuscar.Size = new System.Drawing.Size(601, 22);
+            this.textBuscar.Size = new System.Drawing.Size(600, 22);
             this.textBuscar.TabIndex = 15;
             this.textBuscar.TextChanged += new System.EventHandler(this.textBuscar_TextChanged);
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.AutoSize = true;
+            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.Location = new System.Drawing.Point(23, 16);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(69, 20);
+            this.lblBuscar.TabIndex = 16;
+            this.lblBuscar.Text = "Buscar";
             // 
             // formProductos
             // 
@@ -233,12 +226,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.CancelButton = this.btnCancelar;
             this.ClientSize = new System.Drawing.Size(722, 535);
+            this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.textBuscar);
             this.Controls.Add(this.nudCantidad);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAñadir);
-            this.Controls.Add(this.btnBuscarNombre);
             this.Controls.Add(this.dgvProductos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -257,7 +250,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnBuscarNombre;
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Button btnCancelar;
         public System.Windows.Forms.DataGridView dgvProductos;
@@ -271,5 +263,6 @@
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.NumericUpDown nudCantidad;
         public System.Windows.Forms.TextBox textBuscar;
+        private System.Windows.Forms.Label lblBuscar;
     }
 }
