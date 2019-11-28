@@ -147,7 +147,6 @@
             this.btnBuscarNombre.TabIndex = 8;
             this.btnBuscarNombre.Text = "Buscar Nombre:";
             this.btnBuscarNombre.UseVisualStyleBackColor = true;
-            this.btnBuscarNombre.Click += new System.EventHandler(this.BtnBuscarNombre_Click);
             this.btnBuscarNombre.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBuscarNombre_MouseDown);
             this.btnBuscarNombre.MouseEnter += new System.EventHandler(this.btnBuscarNombre_MouseEnter);
             this.btnBuscarNombre.MouseLeave += new System.EventHandler(this.btnBuscarNombre_MouseLeave);
@@ -224,9 +223,7 @@
             this.textBuscar.Name = "textBuscar";
             this.textBuscar.Size = new System.Drawing.Size(601, 22);
             this.textBuscar.TabIndex = 15;
-            this.textBuscar.Text = "                                                                    Buscar por ma" +
-    "rca";
-            this.textBuscar.TextChanged += new System.EventHandler(this.BtnBuscarNombre_Click);
+            this.textBuscar.TextChanged += new System.EventHandler(this.textBuscar_TextChanged);
             // 
             // formProductos
             // 
@@ -235,7 +232,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.CancelButton = this.btnCancelar;
-            this.ClientSize = new System.Drawing.Size(722, 537);
+            this.ClientSize = new System.Drawing.Size(722, 535);
             this.Controls.Add(this.textBuscar);
             this.Controls.Add(this.nudCantidad);
             this.Controls.Add(this.lblCantidad);

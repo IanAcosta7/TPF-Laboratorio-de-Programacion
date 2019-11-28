@@ -37,26 +37,6 @@ namespace TPF_Laboratorio_de_Programacion.Forms.Ventas_Forms
             this.Close();
         }
 
-        private void BtnBuscarNombre_Click(object sender, EventArgs e)
-        {
-            if(string.IsNullOrEmpty(textBuscar.Text.Trim()) == false)
-            {
-                   try
-                   {
-                    string busqueda = textBuscar.Text.Trim().ToString(); ///lo que tengo en la caja de texto lo convierto en string
-                    this.actualizarDVGProductos(Producto.getProductByNameBuscar(busqueda));
-                   }
-                   catch(Exception error)
-                   {
-                       MessageBox.Show("El tincho se equivoco fuerte, y no consiguio buscar ese nombre" + error.Message);
-
-                   }
-                   
-
-            }
-            
-        }
-
         private void btnBuscarNombre_MouseEnter(object sender, EventArgs e)
         {
             btnBuscarNombre.BackgroundImage = TPF_Laboratorio_de_Programacion.Properties.Resources.button1_1;
@@ -167,6 +147,20 @@ namespace TPF_Laboratorio_de_Programacion.Forms.Ventas_Forms
         private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             nudCantidad.Maximum = Decimal.Parse(dgvProductos.SelectedRows[0].Cells["colStock"].Value.ToString());
+        }
+
+        private void textBuscar_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string busqueda = textBuscar.Text.Trim().ToString(); ///lo que tengo en la caja de texto lo convierto en string
+                this.actualizarDVGProductos(Producto.getProductByNameBuscar(busqueda));
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("ERROR: El tincho se equivoco fuerte, y no consiguio buscar ese nombre" + error.Message);
+
+            }
         }
     }
 }
