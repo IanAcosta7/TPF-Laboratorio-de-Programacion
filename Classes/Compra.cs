@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TPF_Laboratorio_de_Programacion
 {
@@ -11,13 +12,15 @@ namespace TPF_Laboratorio_de_Programacion
     {
         // Compras es una lista global que guarda el contenido de mi carrito
         private static List<Compra> compras = new List<Compra>();
+        public int codigo;
         public string desc;
         public int cantidad;
         public float precio;
         public float importe;
 
-        public Compra(string newDesc, int newCantidad, float newPrecio, float newImporte)
+        public Compra(int newCodigo, string newDesc, int newCantidad, float newPrecio, float newImporte)
         {
+            this.codigo = newCodigo;
             this.desc = newDesc;
             this.cantidad = newCantidad;
             this.precio = newPrecio;
@@ -40,6 +43,18 @@ namespace TPF_Laboratorio_de_Programacion
             }
 
             return dt;
+        }
+
+        public static float getTotal ()
+        {
+            float total = 0;
+
+            foreach (Compra compra in compras)
+            {
+                total += compra.importe;
+            }
+
+            return total;
         }
 
         public void AddCompra ()
@@ -69,6 +84,15 @@ namespace TPF_Laboratorio_de_Programacion
         public static void vaciarCompras ()
         {
             compras.RemoveRange(0, compras.Count);
+        }
+
+        public static void actualizarStock ()
+        {
+            foreach (Compra compra in compras)
+            {
+                string cmd = string.Format("EXEC decrementarStock '{0}', '{1}'", compra.codigo, compra.cantidad);
+                Utilidades.Ejecutar(cmd);
+            }
         }
     }
 }

@@ -291,6 +291,7 @@
             this.textTotal.Location = new System.Drawing.Point(679, 455);
             this.textTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textTotal.Name = "textTotal";
+            this.textTotal.ReadOnly = true;
             this.textTotal.Size = new System.Drawing.Size(78, 24);
             this.textTotal.TabIndex = 19;
             // 
@@ -530,8 +531,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.CadetBlue;
-            this.BackgroundImage = global::TPF_Laboratorio_de_Programacion.Properties.Resources.fotito;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(851, 518);
             this.Controls.Add(this.tabPage);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

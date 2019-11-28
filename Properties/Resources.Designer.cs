@@ -163,6 +163,16 @@ namespace TPF_Laboratorio_de_Programacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button3_0 {
+            get {
+                object obj = ResourceManager.GetObject("button3.0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fotito {
             get {
                 object obj = ResourceManager.GetObject("fotito", resourceCulture);

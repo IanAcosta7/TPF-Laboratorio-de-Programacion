@@ -74,6 +74,8 @@ namespace TPF_Laboratorio_de_Programacion
             ColCantidad.DataPropertyName = "cantidad";
             colPrice.DataPropertyName = "precio";
             colImporte.DataPropertyName = "importe";
+
+            textTotal.Text = Compra.getTotal().ToString();
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -292,6 +294,9 @@ namespace TPF_Laboratorio_de_Programacion
         private void btnFinalizarVenta_Click(object sender, EventArgs e)
         {
             //finalize stock y avisos...
+            Compra.vaciarCompras();
+            this.actualizarDVGVentas(Compra.getAllCompras());
+            MessageBox.Show("Se ha producido la venta");
         }
     }
 }

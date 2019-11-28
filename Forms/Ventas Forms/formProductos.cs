@@ -98,6 +98,9 @@ namespace TPF_Laboratorio_de_Programacion.Forms.Ventas_Forms
         private void formProductos_Load(object sender, EventArgs e)
         {
             this.actualizarDVGProductos(Producto.getAllProducts());
+
+            // Fija la cantidad de stock seleccionable al maximo del producto
+            nudCantidad.Maximum = Decimal.Parse(dgvProductos.SelectedRows[0].Cells["colStock"].Value.ToString());
         }
 
         public void actualizarDVGProductos(DataTable productos)
@@ -124,22 +127,30 @@ namespace TPF_Laboratorio_de_Programacion.Forms.Ventas_Forms
                 formMain fmMain = Application.OpenForms.OfType<formMain>().FirstOrDefault();
 
                 DataGridViewRow row = dgvProductos.SelectedRows[0];
-                string desc = string.Format("{0} {1} {2} Talle:{3} #{4}", row.Cells["colNombre"].Value.ToString(), row.Cells["colMarca"].Value.ToString(), row.Cells["colColor"].Value.ToString(), row.Cells["colTalle"].Value.ToString(), row.Cells["colCodigo"].Value.ToString());
+                int codigo = Int32.Parse(row.Cells["colCodigo"].Value.ToString());
+                string desc = string.Format("{0} - {1} - {2} - TALLE:{3} - #{4}", row.Cells["colNombre"].Value.ToString(), row.Cells["colMarca"].Value.ToString(), row.Cells["colColor"].Value.ToString(), row.Cells["colTalle"].Value.ToString(), row.Cells["colCodigo"].Value.ToString());
                 int cantidad = Int32.Parse(nudCantidad.Value.ToString());
                 float precio = float.Parse(row.Cells["colPrecio"].Value.ToString());
 
                 // Creo la compra y la añado al carrito
-                Compra nueva = new Compra(desc, cantidad, precio, cantidad*precio);
+                Compra nueva = new Compra(codigo, desc, cantidad, precio, cantidad*precio);
                 nueva.AddCompra();
 
                 // Actualizo el carrito
+                Compra.actualizarStock();
                 fmMain.actualizarDVGVentas(Compra.getAllCompras());
+                fmMain.actualizarDVGStock(Producto.getAllProducts());
 
                 this.Close();
             } else
             {
                 MessageBox.Show("No se ha seleccionado ningún producto");
             }
+        }
+
+        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            nudCantidad.Maximum = Decimal.Parse(dgvProductos.SelectedRows[0].Cells["colStock"].Value.ToString());
         }
     }
 }

@@ -181,6 +181,26 @@ namespace TPF_Laboratorio_de_Programacion
             return HayError;
         }
 
+        /*public static void decreaseProductStock (int id, int dec)
+        {
+            int stock = findProductStock(id);
 
+            if (stock != -1)
+                string cmd = string.Format("UPDATE Productos SET stock={0} WHERE id_producto={1}", stock - dec, id);
+            MessageBox.Show(cmd);
+        }
+
+        public static int findProductStock (int id)
+        {
+            int stock = -1;
+
+            foreach (DataRow row in getAllProducts().Rows)
+            {
+                if (row.Field<Int32>("id_producto") == id)
+                    stock = row.Field<int>("stock");
+            }
+
+            return stock;
+        }*/
     }
 }
