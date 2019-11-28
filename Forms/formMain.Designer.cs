@@ -56,20 +56,12 @@
             this.colPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colImporte = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAñadirPdto = new System.Windows.Forms.Button();
-            this.tabCaja = new System.Windows.Forms.TabPage();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.errorProvCant = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             this.tabPage.SuspendLayout();
             this.tabStock.SuspendLayout();
             this.tabVentas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).BeginInit();
-            this.tabCaja.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvCant)).BeginInit();
             this.SuspendLayout();
             // 
@@ -228,7 +220,6 @@
             // 
             this.tabPage.Controls.Add(this.tabStock);
             this.tabPage.Controls.Add(this.tabVentas);
-            this.tabPage.Controls.Add(this.tabCaja);
             this.tabPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabPage.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage.Location = new System.Drawing.Point(0, 0);
@@ -447,82 +438,6 @@
             this.btnAñadirPdto.MouseEnter += new System.EventHandler(this.btnAñadir_MouseEnter);
             this.btnAñadirPdto.MouseLeave += new System.EventHandler(this.btnAñadir_MouseLeave);
             // 
-            // tabCaja
-            // 
-            this.tabCaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabCaja.Controls.Add(this.lblTotal);
-            this.tabCaja.Controls.Add(this.dataGridView1);
-            this.tabCaja.Location = new System.Drawing.Point(4, 26);
-            this.tabCaja.Margin = new System.Windows.Forms.Padding(4);
-            this.tabCaja.Name = "tabCaja";
-            this.tabCaja.Padding = new System.Windows.Forms.Padding(4);
-            this.tabCaja.Size = new System.Drawing.Size(843, 488);
-            this.tabCaja.TabIndex = 1;
-            this.tabCaja.Text = "Caja";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(8, 466);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(47, 17);
-            this.lblTotal.TabIndex = 6;
-            this.lblTotal.Text = "Total:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DarkGray;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.txtDescripcion,
-            this.txtCantidad,
-            this.txtFecha});
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 6);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(827, 449);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.HeaderText = "Descripción";
-            this.txtDescripcion.MinimumWidth = 6;
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.ReadOnly = true;
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.HeaderText = "Cantidad";
-            this.txtCantidad.MinimumWidth = 6;
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.ReadOnly = true;
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.HeaderText = "Fecha";
-            this.txtFecha.MinimumWidth = 6;
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.ReadOnly = true;
-            // 
             // errorProvCant
             // 
             this.errorProvCant.ContainerControl = this;
@@ -547,9 +462,6 @@
             this.tabVentas.ResumeLayout(false);
             this.tabVentas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrito)).EndInit();
-            this.tabCaja.ResumeLayout(false);
-            this.tabCaja.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvCant)).EndInit();
             this.ResumeLayout(false);
 
@@ -570,13 +482,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.TabControl tabPage;
         private System.Windows.Forms.TabPage tabStock;
-        private System.Windows.Forms.TabPage tabCaja;
         private System.Windows.Forms.TabPage tabVentas;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtDescripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtCantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn txtFecha;
         private System.Windows.Forms.Button btnAñadirPdto;
         private System.Windows.Forms.Button btnFinalizarVenta;
         private System.Windows.Forms.Button btnVaciarCarrito;
