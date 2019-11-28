@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TPF_Laboratorio_de_Programacion;
 
 namespace TPF_Laboratorio_de_Programacion.Forms.Ventas_Forms
 {
@@ -38,18 +39,22 @@ namespace TPF_Laboratorio_de_Programacion.Forms.Ventas_Forms
 
         private void BtnBuscarNombre_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(textBuscar.Text.Trim()))
+            if(string.IsNullOrEmpty(textBuscar.Text.Trim()) == false)
             {
-                try
-                {
-                    dgvProductos.DataSource = (Producto.getProductByNameBuscar(textBuscar.Text.Trim())).Tables[0];
-                }
-                catch(Exception error)
-                {
-                    MessageBox.Show("el tincho se equivoco fuerte" + error.Message);
+                   try
+                   {
+                    string busqueda = textBuscar.Text.Trim().ToString(); ///lo que tengo en la caja de texto lo convierto en string
+                    this.actualizarDVGProductos(Producto.getProductByNameBuscar(busqueda));
+                   }
+                   catch(Exception error)
+                   {
+                       MessageBox.Show("El tincho se equivoco fuerte, y no consiguio buscar ese nombre" + error.Message);
 
-                }
+                   }
+                   
+
             }
+            
         }
 
         private void btnBuscarNombre_MouseEnter(object sender, EventArgs e)

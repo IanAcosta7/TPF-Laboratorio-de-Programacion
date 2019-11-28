@@ -52,13 +52,13 @@ namespace TPF_Laboratorio_de_Programacion
 
             return ds;
         }
-        public static DataSet getProductByNameBuscar(string name)
+        public static DataTable getProductByNameBuscar(string name)
         {
             // Conexion BD
             string cmd = string.Format("SELECT * FROM Productos WHERE nombre LIKE('%" + name +"%')" );
             DataSet ds = Utilidades.Ejecutar(cmd);
 
-            return ds;
+            return ds.Tables[0];
         }
 
         public static void borrarProducto(string nombre)

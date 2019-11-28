@@ -225,6 +225,7 @@
             this.textBuscar.TabIndex = 15;
             this.textBuscar.Text = "                                                                    Buscar por ma" +
     "rca";
+            this.textBuscar.TextChanged += new System.EventHandler(this.BtnBuscarNombre_Click);
             // 
             // formProductos
             // 
